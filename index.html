@@ -4,270 +4,247 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Glänzi Reinigungsservice | Professionelle Gebäudereinigung</title>
+<title>Glänzi Reinigungsservice | Ibbenbüren - Professionelle Gebäudereinigung</title>
 
-<meta name="description" content="Glänzi Reinigungsservice - Professionelle Reinigung in Deutschland. Mitglied bei BG Bau & Handwerkskammer Münster. Voll versichert.">
-<meta name="keywords" content="Glänzi, Reinigungsservice, Gebäudereinigung, Büroreinigung, Fensterreinigung">
-<link rel="canonical" href="https://deine-domain.de">
+<meta name="description" content="Glänzi Reinigungsservice in Ibbenbüren. Spezialist für Büroreinigung, Fensterreinigung & Bauendreinigung. Haftpflichtversichert & Mitglied bei BG Bau.">
+<meta name="keywords" content="Reinigungsservice Ibbenbüren, Glänzi, Büroreinigung, Praxisreinigung, Fensterreinigung Ibbenbüren, Gebäudereinigung">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 :root{
-    --primary:#0a1f44;
-    --gold:#d4af37;
+    --primary:#0a1f44; /* كحلي ملكي */
+    --gold:#c5a02a;    /* ذهبي مطفي فخم */
+    --light:#f8f9fa;
 }
 
 body{
     margin:0;
-    font-family:Segoe UI;
-    background:#f4f6f9;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background:#ffffff;
+    color: #333;
 }
 
-/* NAV */
+/* NAVIGATION */
 nav{
     display:flex;
     justify-content:space-between;
-    padding:15px 25px;
+    align-items: center;
+    padding:15px 5%;
     background:white;
     position:sticky;
     top:0;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.05);
 }
 
-/* HEADER */
+nav b { font-size: 24px; color: var(--primary); letter-spacing: 1px; }
+nav a { text-decoration: none; color: var(--primary); font-weight: 600; margin-left: 20px; font-size: 14px; text-transform: uppercase; }
+
+/* HERO SECTION */
 header{
-    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?auto=format&fit=crop&w=1600&q=100') center/cover;
+    background: linear-gradient(rgba(10, 31, 68, 0.8), rgba(10, 31, 68, 0.7)),
+    url('https://images.unsplash.com/photo-1581578731548-c64695cc6954?auto=format&fit=crop&w=1600&q=80') center/cover;
     color:white;
     text-align:center;
-    padding:140px 20px;
+    padding:160px 20px;
 }
 
-header h1{
-    font-size:42px;
-}
+header h1{ font-size: clamp(32px, 5vw, 56px); margin: 0; }
+header p{ font-size: clamp(18px, 2vw, 24px); opacity: 0.9; margin: 15px 0 30px; font-style: italic; }
 
 .btn{
     background:var(--gold);
-    padding:15px 35px;
+    padding:18px 40px;
     border-radius:50px;
     text-decoration:none;
-    color:black;
+    color:white;
     font-weight:bold;
     display:inline-block;
-    margin-top:20px;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
 }
+.btn:hover{ background: #b08d22; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
-/* SECTION */
-.section{
-    padding:70px 20px;
-    max-width:1200px;
-    margin:auto;
+/* TRUST BAR */
+.trust-bar {
+    background: var(--light);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
 }
+.trust-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.trust-item { font-weight: bold; color: var(--primary); font-size: 14px; display: flex; align-items: center; gap: 10px; }
+.trust-item i { color: var(--gold); font-size: 20px; }
 
-/* SERVICES */
+/* SERVICES GRID */
+.section{ padding:80px 5%; max-width:1200px; margin:auto; }
+h2 { text-align: center; color: var(--primary); font-size: 32px; margin-bottom: 50px; position: relative; }
+h2::after { content: ''; width: 60px; height: 3px; background: var(--gold); position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+
 .services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-    display:flex;
-    align-items:center;
-    gap:15px;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card i{
-    background:var(--gold);
-    color:white;
-    padding:15px;
-    border-radius:50%;
-}
-
-/* IMAGE SHOWCASE */
-.gallery{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:20px;
 }
 
-.gallery img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:15px;
-    transition:0.4s;
-}
-
-.gallery img:hover{
-    transform:scale(1.05);
-}
-
-/* TRUST */
-.trust{
+.card{
     background:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-    text-align:center;
+    padding:20px;
+    border-radius:15px;
+    border: 1px solid #eee;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    transition:0.3s;
+}
+.card:hover{ border-color: var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.card i{
+    font-size: 20px;
+    color: var(--gold);
+    background: rgba(212, 175, 55, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
-.trust i{
-    font-size:30px;
-    color:var(--gold);
-    margin-bottom:10px;
+/* GALLERY */
+.gallery{ display:grid; grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); gap:20px; }
+.img-container { position: relative; border-radius: 15px; overflow: hidden; height: 300px; }
+.gallery img{ width:100%; height:100%; object-fit:cover; transition:0.5s; }
+.img-label {
+    position: absolute; bottom: 0; left: 0; right: 0; 
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white; padding: 20px; font-weight: bold;
 }
+.img-container:hover img { transform: scale(1.1); }
 
-/* FORM */
-input,textarea{
-    width:100%;
-    padding:15px;
-    margin:10px 0;
-    border-radius:10px;
-    border:1px solid #ccc;
-}
+/* CONTACT */
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; margin-top: 40px; }
+.info-box { background: var(--primary); color: white; padding: 40px; border-radius: 20px; }
+.info-box h3 { color: var(--gold); }
+.info-box p { margin: 15px 0; display: flex; align-items: center; gap: 10px; }
 
-/* CTA */
-.cta{
-    background:var(--primary);
-    color:white;
-    text-align:center;
-    padding:60px;
+form input, form textarea {
+    width: 100%; padding: 15px; margin-bottom: 15px; 
+    border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;
 }
 
 /* WHATSAPP */
 .whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25d366;
-    color:white;
-    padding:18px;
-    border-radius:50%;
-    font-size:28px;
-    text-decoration:none;
-    box-shadow:0 5px 25px rgba(0,0,0,0.4);
-    animation:pulse 1.2s infinite;
+    position:fixed; bottom:30px; right:30px;
+    background:#25d366; color:white; width: 60px; height: 60px;
+    border-radius:50%; display: flex; align-items: center; justify-content: center;
+    font-size:30px; text-decoration:none; z-index: 1000;
+    box-shadow:0 10px 25px rgba(37, 211, 102, 0.3);
+    animation:pulse 2s infinite;
 }
 
 @keyframes pulse{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.15);}
-    100%{transform:scale(1);}
+    0%{box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);}
+    70%{box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);}
+    100%{box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);}
 }
 </style>
 
-<!-- SEO Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "CleaningService",
- "name": "Glänzi Reinigungsservice",
- "telephone": "+491634895527",
- "areaServed": "Deutschland",
- "description": "Professionelle Gebäudereinigung. Mitglied bei BG Bau und Handwerkskammer Münster. Voll haftpflichtversichert."
-}
-</script>
-
 </head>
-
 <body>
 
-<!-- NAV -->
 <nav>
-<b>Glänzi</b>
-<div>
-<a href="#services">Leistungen</a>
-<a href="#kontakt">Kontakt</a>
-</div>
+    <b>GLÄNZI</b>
+    <div>
+        <a href="#services">Leistungen</a>
+        <a href="#kontakt">Kontakt</a>
+    </div>
 </nav>
 
-<!-- HEADER -->
 <header>
-<h1>Glänzi Reinigungsservice</h1>
-<p>Professionelle Reinigung mit Qualität & Vertrauen</p>
-<a href="https://wa.me/491634895527?text=Hallo%20ich%20brauche%20ein%20Angebot" class="btn">Jetzt Angebot holen</a>
+    <h1>Glänzi Reinigungsservice</h1>
+    <p>Premium-Reinigungslösungen für Ibbenbüren & Umgebung</p>
+    <a href="https://wa.me/491634895527" class="btn">KOSTENLOSES ANGEBOT <i class="fas fa-arrow-right"></i></a>
 </header>
 
-<!-- TRUST -->
-<section class="section">
-<div class="trust">
-<i class="fas fa-shield-alt"></i>
-<h3>Geprüfte Qualität & Sicherheit</h3>
-<p>
-Mitglied bei der Handwerkskammer Münster und BG Bau.<br>
-Unser Unternehmen ist vollständig haftpflichtversichert (Haftpflichtversicherung).<br>
-Zuverlässigkeit, Sicherheit und Professionalität stehen bei uns an erster Stelle.
-</p>
+<div class="trust-bar">
+    <div class="trust-container">
+        <div class="trust-item"><i class="fas fa-check-circle"></i> Haftpflichtversichert</div>
+        <div class="trust-item"><i class="fas fa-hard-hat"></i> Mitglied BG Bau</div>
+        <div class="trust-item"><i class="fas fa-university"></i> HWK Münster</div>
+        <div class="trust-item"><i class="fas fa-star"></i> 100% Zuverlässig</div>
+    </div>
 </div>
-</section>
 
-<!-- SERVICES -->
 <section class="section" id="services">
-<h2>Unsere Dienstleistungen</h2>
-
-<div class="services">
-
-<div class="card"><i class="fas fa-window-maximize"></i> Glasreinigung</div>
-<div class="card"><i class="fas fa-stethoscope"></i> Büro-, Praxis- und Kita-Reinigung</div>
-<div class="card"><i class="fas fa-building"></i> Wohnungs- & Treppenhauspflege</div>
-<div class="card"><i class="fas fa-hard-hat"></i> Bauendreinigung</div>
-<div class="card"><i class="fas fa-magic"></i> Spezialaufträge</div>
-<div class="card"><i class="fas fa-cogs"></i> Individuelle Reinigungslösungen</div>
-<div class="card"><i class="fas fa-water"></i> Hochdruckreinigung</div>
-<div class="card"><i class="fas fa-tools"></i> Hausmeister-Service</div>
-<div class="card"><i class="fas fa-trash"></i> Müll-Service</div>
-<div class="card"><i class="fas fa-clock"></i> Flexible Reinigung außerhalb der Öffnungszeiten</div>
-<div class="card"><i class="fas fa-parking"></i> Reinigung von Parkplätzen, Höfen und Außenflächen</div>
-
-</div>
+    <h2>Unsere Leistungen</h2>
+    <div class="services">
+        <div class="card"><i class="fas fa-window-restore"></i> <span>Glas- & Fensterreinigung</span></div>
+        <div class="card"><i class="fas fa-hospital"></i> <span>Büro-, Praxis- & Kita-Reinigung</span></div>
+        <div class="card"><i class="fas fa-home"></i> <span>Wohnungs- & Treppenhaus</span></div>
+        <div class="card"><i class="fas fa-broom"></i> <span>Bauendreinigung</span></div>
+        <div class="card"><i class="fas fa-wand-magic-sparkles"></i> <span>Spezialaufträge</span></div>
+        <div class="card"><i class="fas fa-leaf"></i> <span>Individuelle Lösungen</span></div>
+        <div class="card"><i class="fas fa-faucet-drip"></i> <span>Hochdruckreinigung</span></div>
+        <div class="card"><i class="fas fa-toolbox"></i> <span>Hausmeister-Service</span></div>
+        <div class="card"><i class="fas fa-dumpster"></i> <span>Müll-Service</span></div>
+        <div class="card"><i class="fas fa-moon"></i> <span>Nacht- & Wochenendreinigung</span></div>
+        <div class="card"><i class="fas fa-car-side"></i> <span>Parkplatz- & Außenreinigung</span></div>
+    </div>
 </section>
 
-<!-- GALLERY -->
-<section class="section">
-<h2>Unsere Arbeit</h2>
-
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-<img src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f">
-<img src="https://images.unsplash.com/photo-1527515637462-daf1fce9b3b1">
-</div>
+<section class="section" style="background: var(--light);">
+    <h2>Eindrücke unserer Arbeit</h2>
+    <div class="gallery">
+        <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=800&q=80">
+            <div class="img-label">Professionelle Büroreinigung</div>
+        </div>
+        <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=800&q=80">
+            <div class="img-label">Kristallklare Fenster</div>
+        </div>
+        <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80">
+            <div class="img-label">Bau- & Endreinigung</div>
+        </div>
+    </div>
 </section>
 
-<!-- CONTACT -->
 <section class="section" id="kontakt">
-<h2>Kontakt</h2>
-
-<form>
-<input type="text" placeholder="Name" required>
-<input type="email" placeholder="E-Mail" required>
-<textarea placeholder="Nachricht"></textarea>
-<button class="btn">Senden</button>
-</form>
-
+    <h2>Kontaktieren Sie uns</h2>
+    <div class="contact-grid">
+        <div class="info-box">
+            <h3>Informationen</h3>
+            <p><i class="fas fa-phone"></i> +49 163 4895527</p>
+            <p><i class="fas fa-envelope"></i> glanzi.service@gmail.com</p>
+            <p><i class="fas fa-location-dot"></i> Große Str. 9, 49477 Ibbenbüren</p>
+            <hr style="opacity: 0.2; margin: 20px 0;">
+            <p><small>Mitglied der Handwerkskammer Münster & BG Bau</small></p>
+        </div>
+        <form action="#">
+            <input type="text" placeholder="Ihr Name" required>
+            <input type="email" placeholder="Ihre E-Mail" required>
+            <textarea placeholder="Wie können wir helfen?" rows="5"></textarea>
+            <button class="btn" style="width: 100%;">NACHRICHT SENDEN</button>
+        </form>
+    </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-<h2>Jetzt Termin sichern</h2>
-<p>📞 +49 163 4895527</p>
-<p>📧 glanzi.service@gmail.com</p>
-</section>
+<footer style="text-align: center; padding: 40px; background: #eee; font-size: 14px; color: #777;">
+    &copy; 2026 Glänzi Reinigungsservice. Alle Rechte vorbehalten.
+</footer>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/491634895527?text=Hallo%20Glänzi%20Team,%20ich%20brauche%20ein%20Angebot">
-<i class="fab fa-whatsapp"></i>
+<a class="whatsapp" href="https://wa.me/491634895527">
+    <i class="fab fa-whatsapp"></i>
 </a>
 
 </body>
