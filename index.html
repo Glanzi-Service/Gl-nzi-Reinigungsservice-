@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -9,7 +8,7 @@
         :root { --primary: #0056b3; --secondary: #00aaff; --accent: #28a745; --dark: #1a1a1a; --gray: #f4f7f6; }
         body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: var(--dark); margin: 0; background: #fff; text-align: center; }
         
-        /* هيدر المبنى الفخم - بدون لوغو */
+        /* هيدر المبنى الاحترافي */
         header { 
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
             background-size: cover;
@@ -39,6 +38,12 @@
         .card-content { padding: 20px; }
         .card h3 { margin-top: 0; color: var(--primary); font-size: 1.3rem; }
         
+        /* قسم جميع الخدمات الـ 11 المطور */
+        .all-services { background: var(--gray); padding: 60px 0; border-radius: 20px; margin: 40px 0; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; text-align: left; }
+        .service-item { background: white; padding: 20px; border-radius: 8px; border-left: 4px solid var(--secondary); font-weight: bold; transition: 0.3s; }
+        .service-item:hover { background: var(--primary); color: white; }
+
         .contact-box { background: #eef4ff; padding: 40px; border-radius: 15px; margin: 50px 0; border: 2px dashed var(--primary); }
         .btn { background: var(--secondary); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; font-size: 1.2rem; margin-top: 20px; }
         .phone { font-size: 1.5rem; color: var(--primary); font-weight: bold; display: block; margin: 15px 0; }
@@ -56,34 +61,56 @@
 </header>
 
 <div class="container">
-    <h2>Unsere Dienstleistungen</h2>
+    <h2>Unsere Premium-Dienstleistungen</h2>
     <div class="grid">
         <div class="card">
             <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=500&q=60" alt="Professional Office" class="card-img">
             <div class="card-content">
-                <h3>🪟 Glasreinigung</h3>
+                <h3>Büroreinigung</h3>
+                <p>Wir sorgen für eine saubere Arbeitsatmosphäre, die Ihre Produktivität steigert.</p>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=500&q=60" alt="Medical Practice" class="card-img">
+            <img src="https://images.unsplash.com/photo-1502005011925-54e4c238b16c?auto=format&fit=crop&w=500&q=60" alt="Shiny Glass Facade" class="card-img">
             <div class="card-content">
-                <h3>🩺 Büro- & Praxisreinigung</h3>
+                <h3>Fensterreinigung</h3>
+                <p>Kristallklare Sicht durch professionelle Glas- und Rahmenreinigung.</p>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1613977257363-707ba934f246?auto=format&fit=crop&w=500&q=60" alt="Clean Stairs" class="card-img">
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba934f246?auto=format&fit=crop&w=500&q=60" alt="Clean Marble Stairs" class="card-img">
             <div class="card-content">
-                <h3>🏘️ Wohnungs- & Treppenhauspflege</h3>
+                <h3>Treppenhausreinigung</h3>
+                <p>Zuverlässige Pflege Ihrer Wohnanlagen für einen glänzenden ersten Eindruck.</p>
             </div>
         </div>
-        </div>
-
-    <div class="contact-box">
-        <h2>Angebot anfordern</h2>
-        <p>Haben Sie Fragen oder benötigen Sie eine professionelle Reinigung? Rufen Sie uns an!</p>
-        <span class="phone">📞 +49 163 4895527</span>
-        <a href="tel:+491634895527" class="btn">Direkt anrufen</a>
     </div>
+</div>
+
+<div class="all-services container">
+    <h2>Alle Dienstleistungen im Überblick</h2>
+    <div class="services-grid">
+        <div class="service-item">✨ Glasreinigung</div>
+        <div class="service-item">✨ Büroreinigung</div>
+        <div class="service-item">✨ Praxisreinigung</div>
+        <div class="service-item">✨ Kita-Reinigung</div>
+        <div class="service-item">✨ Wohnungsreinigung</div>
+        <div class="service-item">✨ Treppenhauspflege</div>
+        <div class="service-item">✨ Bauendreinigung</div>
+        <div class="service-item">✨ Spezialaufträge</div>
+        <div class="service-item">✨ Individuelle Reinigung</div>
+        <div class="service-item">✨ Hochdruckreinigung</div>
+        <div class="service-item">✨ Hausmeister-Service</div>
+        <div class="service-item">✨ Müll-Service</div>
+        <div class="service-item">✨ Flexible Zeiten</div>
+    </div>
+</div>
+
+<div class="container contact-box">
+    <h2>Angebot anfordern</h2>
+    <p>Haben Sie Fragen أو benötigen Sie eine professionelle Reinigung? Rufen Sie uns an!</p>
+    <span class="phone">📞 +49 163 4895527</span>
+    <a href="tel:+491634895527" class="btn">Direkt anrufen</a>
 </div>
 
 <footer>
@@ -105,7 +132,7 @@
             </div>
             <div>
                 <h4>Region</h4>
-                <p>Osnabrück, Rheine und Umgebung.</p>
+                <p>Ibbenbüren, Osnabrück, Rheine und Umgebung.</p>
             </div>
         </div>
         <hr>
