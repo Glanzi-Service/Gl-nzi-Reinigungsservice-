@@ -1,4 +1,5 @@
-        <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -6,107 +7,82 @@
     <title>Glänzi Reinigungsservice | Ibbenbüren</title>
     <style>
         :root { --primary: #0056b3; --secondary: #00aaff; --accent: #28a745; --dark: #1a1a1a; --gray: #f4f7f6; }
-        body { font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--dark); margin: 0; background: #fff; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: var(--dark); margin: 0; background: #fff; text-align: center; }
         
-        /* هيدر المبنى الاحترافي */
+        /* هيدر المبنى الفخم - بدون لوغو */
         header { 
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1500&q=80') no-repeat center center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
             background-size: cover;
-            color: white; padding: 100px 20px; text-align: center;
+            color: white; padding: 100px 20px; text-align: center; 
         }
-        .logo-img { width: 110px; height: auto; border-radius: 50%; background: #fff; padding: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); margin-bottom: 20px; }
-        header h1 { font-size: 3.5rem; margin: 0; letter-spacing: 2px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
-
-        /* شريط الثقة */
-        .trust-bar { background: #fff; padding: 25px 0; border-bottom: 1px solid #ddd; text-align: center; }
-        .trust-item { display: inline-block; margin: 0 30px; font-weight: bold; color: #555; font-size: 0.95rem; line-height: 1.2; }
-        .trust-item span { color: var(--primary); display: block; font-size: 1.15rem; font-weight: 800; }
-
-        .container { width: 90%; max-width: 1200px; margin: auto; padding: 60px 0; }
         
-        /* قسم البطاقات الاحترافية */
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .feature-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align: center; transition: 0.3s; }
-        .feature-card:hover { transform: translateY(-10px); }
-        .feature-img { width: 100%; height: 240px; object-fit: cover; }
-        .feature-content { padding: 30px; }
-        .feature-content h3 { color: var(--primary); margin-top: 0; font-size: 1.5rem; }
-
-        .services-section { background: var(--gray); padding: 80px 0; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-        .service-item { background: white; padding: 20px; border-radius: 8px; border-left: 4px solid var(--secondary); font-weight: bold; transition: 0.3s; }
-        .service-item:hover { background: var(--primary); color: white; }
-
-        .cta-section { background: var(--primary); color: white; padding: 70px 20px; text-align: center; margin: 40px 0; border-radius: 20px; }
-        .btn-call { background: var(--accent); color: white; padding: 18px 45px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.3rem; display: inline-block; margin-top: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-
-        footer { background: var(--dark); color: #ccc; padding: 60px 20px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left; }
-        .footer-grid h4 { color: white; margin-bottom: 20px; border-bottom: 2px solid var(--secondary); display: inline-block; }
+        header h1 { 
+            margin: 0; 
+            font-size: 4rem; 
+            font-weight: bold;
+            letter-spacing: 2px;
+            background: linear-gradient(to bottom, #ffffff, #a1d6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.7);
+        }
+        header p { font-size: 1.6rem; margin-top: 10px; text-shadow: 1px 1px 5px rgba(0,0,0,0.5); }
+        
+        .container { width: 90%; max-width: 1100px; margin: auto; padding: 20px; }
+        h2 { color: var(--primary); margin-top: 40px; }
+        
+        /* البطاقات الاحترافية الجديدة بالصور المضمونة */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0; text-align: left; }
+        .card { background: var(--light); padding: 0; border-radius: 10px; overflow: hidden; transition: 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
+        .card-img { width: 100%; height: 200px; object-fit: cover; }
+        .card-content { padding: 20px; }
+        .card h3 { margin-top: 0; color: var(--primary); font-size: 1.3rem; }
+        
+        .contact-box { background: #eef4ff; padding: 40px; border-radius: 15px; margin: 50px 0; border: 2px dashed var(--primary); }
+        .btn { background: var(--secondary); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; font-size: 1.2rem; margin-top: 20px; }
+        .phone { font-size: 1.5rem; color: var(--primary); font-weight: bold; display: block; margin: 15px 0; }
+        
+        footer { background: var(--dark); color: white; padding: 40px 20px; margin-top: 50px; font-size: 0.9rem; text-align: center; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; }
+        hr { border: 0; border-top: 1px solid #555; margin: 20px 0; }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="logo.png" alt="Glänzi Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/110?text=G'">
     <h1>Glänzi</h1>
-    <p>Glänzi im Haus, sorgen raus – Ihr Profi für Gebäudereinigung</p>
+    <p>Reinigungsservice – Ihr zuverlässiger Partner in Ibbenbüren</p>
 </header>
 
-<div class="trust-bar">
-    <div class="trust-item">Mitglied der <span>Handwerkskammer Münster</span></div>
-    <div class="trust-item">Versichert bei der <span>BG BAU</span></div>
-    <div class="trust-item">Zertifizierter <span>Meisterbetrieb-Service</span></div>
-</div>
-
 <div class="container">
-    <div class="features">
-        <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=800&q=80" class="feature-img" alt="Professional Office">
-            <div class="feature-content">
-                <h3>Büroreinigung</h3>
-                <p>Wir sorgen für eine makellose Arbeitsatmosphäre, die Ihre Produktivität und Ihr Image steigert.</p>
+    <h2>Unsere Dienstleistungen</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=500&q=60" alt="Professional Office" class="card-img">
+            <div class="card-content">
+                <h3>🪟 Glasreinigung</h3>
             </div>
         </div>
-        <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1502005011925-54e4c238b16c?auto=format&fit=crop&w=800&q=80" class="feature-img" alt="Crystal Clear Windows">
-            <div class="feature-content">
-                <h3>Fensterreinigung</h3>
-                <p>Kristallklare Sicht durch professionelle Glas- und Rahmenreinigung für Privat- und Gewerbeobjekte.</p>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=500&q=60" alt="Medical Practice" class="card-img">
+            <div class="card-content">
+                <h3>🩺 Büro- & Praxisreinigung</h3>
             </div>
         </div>
-        <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80" class="feature-img" alt="Pristine Stairs">
-            <div class="feature-content">
-                <h3>Treppenhausreinigung</h3>
-                <p>Zuverlässige und regelmäßige Pflege Ihrer Wohnanlagen für einen glänzenden ersten Eindruck.</p>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba934f246?auto=format&fit=crop&w=500&q=60" alt="Clean Stairs" class="card-img">
+            <div class="card-content">
+                <h3>🏘️ Wohnungs- & Treppenhauspflege</h3>
             </div>
         </div>
-    </div>
-</div>
+        </div>
 
-<div class="services-section">
-    <div class="container">
-        <h2 style="text-align:center; margin-bottom:40px;">Unsere weiteren Leistungen</h2>
-        <div class="services-grid">
-            <div class="service-item">✨ Unterhaltsreinigung</div>
-            <div class="service-item">🏗️ Bauendreinigung</div>
-            <div class="service-item">🩺 Praxisreinigung</div>
-            <div class="service-item">🏘️ Wohnungsreinigung</div>
-            <div class="service-item">👨‍🔧 Hausmeister-Service</div>
-            <div class="service-item">🔫 Hochdruckreinigung</div>
-            <div class="service-item">♻️ Müll-Service</div>
-            <div class="service-item">🕒 Flexible Zeiten</div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="cta-section">
-        <h2>Bereit für den Glänzi-Effekt?</h2>
-        <p>Kontaktieren Sie uns jetzt für ein kostenloses und unverbindliches Angebot!</p>
-        <span style="font-size: 2rem; display: block; margin: 15px 0;">📞 +49 163 4895527</span>
-        <a href="tel:+491634895527" class="btn-call">Jetzt Termin vereinbaren</a>
+    <div class="contact-box">
+        <h2>Angebot anfordern</h2>
+        <p>Haben Sie Fragen oder benötigen Sie eine professionelle Reinigung? Rufen Sie uns an!</p>
+        <span class="phone">📞 +49 163 4895527</span>
+        <a href="tel:+491634895527" class="btn">Direkt anrufen</a>
     </div>
 </div>
 
@@ -115,15 +91,21 @@
         <div class="footer-grid">
             <div>
                 <h4>Impressum</h4>
-                <p>Glänzi Reinigungsservice<br>Inhaber: Mohammed Wafa Amiri<br>Große Str. 9 | 49477 Ibbenbüren</p>
+                <p>
+                    Glänzi Reinigungsservice<br>
+                    Inhaber: Mohammed Wafa Amiri<br>
+                    Große Str. 9<br>
+                    49477 Ibbenbüren
+                </p>
             </div>
             <div>
                 <h4>Kontakt</h4>
-                <p>Mobil: +49 163 4895527<br>E-Mail: glanzi.service@gmail.com</p>
+                <p>Mobil: +49 163 4895527<br>
+                E-Mail: glanzi.service@gmail.com</p>
             </div>
             <div>
                 <h4>Region</h4>
-                <p>Ibbenbüren, Osnabrück, Rheine und Umgebung.</p>
+                <p>Osnabrück, Rheine und Umgebung.</p>
             </div>
         </div>
         <hr>
