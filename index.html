@@ -3,7 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glänzi Reinigungsservice</title>
+
+<title>Glänzi Reinigungsservice | Gebäudereinigung Deutschland</title>
+
+<meta name="description" content="Glänzi Reinigungsservice - Professionelle Reinigung für Büros, Fenster, Treppenhäuser und Außenflächen. Schnell, zuverlässig & günstig.">
+<meta name="keywords" content="Glänzi, Reinigungsservice, Gebäudereinigung, Büroreinigung, Fensterreinigung, Treppenhausreinigung Deutschland">
+<meta name="author" content="Glänzi Reinigungsservice">
+
+<link rel="canonical" href="https://deine-domain.de">
+
+<!-- Google Vorschau -->
+<meta property="og:title" content="Glänzi Reinigungsservice">
+<meta property="og:description" content="Professionelle Reinigung in Deutschland">
+<meta property="og:image" content="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
+<meta property="og:type" content="website">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -11,7 +24,6 @@
 :root{
     --primary:#0a1f44;
     --gold:#d4af37;
-    --light:#f5f7fa;
 }
 
 body{
@@ -31,6 +43,13 @@ nav{
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
+nav a{
+    margin-left:15px;
+    text-decoration:none;
+    color:black;
+    font-weight:500;
+}
+
 /* HEADER */
 header{
     background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
@@ -40,6 +59,10 @@ header{
     padding:120px 20px;
 }
 
+header h1{
+    font-size:40px;
+}
+
 .btn{
     background:var(--gold);
     padding:15px 40px;
@@ -47,6 +70,8 @@ header{
     text-decoration:none;
     color:black;
     font-weight:bold;
+    display:inline-block;
+    margin-top:15px;
 }
 
 /* SECTION */
@@ -56,7 +81,14 @@ header{
     margin:auto;
 }
 
-/* SERVICES ICONS */
+/* TEXT SEO */
+.seo-text{
+    text-align:center;
+    margin-bottom:40px;
+    color:#555;
+}
+
+/* SERVICES */
 .services{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -73,32 +105,18 @@ header{
     box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-.card i{
-    font-size:22px;
-    color:var(--gold);
-    background:#f1f1f1;
-    padding:15px;
-    border-radius:50%;
-}
-
-/* IMAGE SERVICES */
+/* IMAGE BOX */
 .service-box{
     position:relative;
     margin-bottom:25px;
     border-radius:20px;
     overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
 .service-box img{
     width:100%;
     height:250px;
     object-fit:cover;
-    transition:0.4s;
-}
-
-.service-box:hover img{
-    transform:scale(1.05);
 }
 
 .overlay{
@@ -108,14 +126,7 @@ header{
     padding:20px;
     background:linear-gradient(transparent,rgba(0,0,0,0.9));
     color:white;
-    font-size:20px;
     font-weight:bold;
-}
-
-/* TESTIMONIAL */
-.testimonial{
-    text-align:center;
-    margin:20px;
 }
 
 /* FORM */
@@ -130,9 +141,9 @@ input,textarea{
 /* MAP */
 iframe{
     width:100%;
-    height:400px;
-    border-radius:15px;
+    height:350px;
     border:0;
+    border-radius:15px;
 }
 
 /* CTA */
@@ -140,7 +151,7 @@ iframe{
     background:var(--primary);
     color:white;
     text-align:center;
-    padding:60px 20px;
+    padding:50px;
 }
 
 /* WHATSAPP */
@@ -152,18 +163,35 @@ iframe{
     color:white;
     padding:18px;
     border-radius:50%;
-    font-size:26px;
+    font-size:28px;
     text-decoration:none;
-    box-shadow:0 5px 20px rgba(0,0,0,0.3);
-    animation:pulse 1.5s infinite;
+    box-shadow:0 5px 25px rgba(0,0,0,0.4);
+    animation:pulse 1.2s infinite;
 }
 
 @keyframes pulse{
     0%{transform:scale(1);}
-    50%{transform:scale(1.1);}
+    50%{transform:scale(1.15);}
     100%{transform:scale(1);}
 }
 </style>
+
+<!-- Google Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CleaningService",
+  "name": "Glänzi Reinigungsservice",
+  "telephone": "+491634895527",
+  "email": "glanzi.service@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "DE"
+  },
+  "description": "Professioneller Reinigungsservice für Büro, Fenster und Gebäude."
+}
+</script>
+
 </head>
 
 <body>
@@ -184,8 +212,16 @@ iframe{
 <a href="tel:+491634895527" class="btn">Jetzt Angebot holen</a>
 </header>
 
-<!-- ICON SERVICES -->
+<!-- SEO TEXT -->
 <section class="section">
+<p class="seo-text">
+Glänzi Reinigungsservice ist Ihr zuverlässiger Partner für professionelle Gebäudereinigung in Deutschland.
+Wir bieten Büroreinigung, Fensterreinigung, Treppenhausreinigung und Außenreinigung zu fairen Preisen.
+</p>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
 <h2>Unsere Leistungen</h2>
 
 <div class="services">
@@ -196,34 +232,19 @@ iframe{
 <div class="card"><i class="fas fa-tools"></i> Hausmeisterservice</div>
 <div class="card"><i class="fas fa-water"></i> Außenreinigung</div>
 </div>
-
 </section>
 
-<!-- IMAGE SERVICES -->
+<!-- IMAGES -->
 <section class="section">
-
 <div class="service-box">
-<img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=100">
+<img src="https://images.unsplash.com/photo-1497366216548-37526070297c">
 <div class="overlay">Büroreinigung</div>
 </div>
 
 <div class="service-box">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=100">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
 <div class="overlay">Fensterreinigung</div>
 </div>
-
-<div class="service-box">
-<img src="https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?auto=format&fit=crop&w=1200&q=100">
-<div class="overlay">Treppenhausreinigung</div>
-</div>
-
-</section>
-
-<!-- TESTIMONIAL -->
-<section class="section">
-<h2>Kundenbewertungen</h2>
-<div class="testimonial">⭐⭐⭐⭐⭐ Sehr sauber!</div>
-<div class="testimonial">⭐⭐⭐⭐⭐ Top Service!</div>
 </section>
 
 <!-- CONTACT -->
@@ -242,7 +263,7 @@ iframe{
 <!-- MAP -->
 <section class="section">
 <h2>Standort</h2>
-<iframe src="https://www.google.com/maps?q=Ibbenbüren&output=embed"></iframe>
+<iframe src="https://www.google.com/maps?q=Deutschland&output=embed"></iframe>
 </section>
 
 <!-- CTA -->
