@@ -1,10 +1,13 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Glänzi Reinigungsservice</title>
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 :root{
@@ -16,10 +19,9 @@
 body{
     margin:0;
     font-family:Segoe UI;
-    color:#333;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
     display:flex;
     justify-content:space-between;
@@ -28,12 +30,6 @@ nav{
     position:sticky;
     top:0;
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-nav a{
-    text-decoration:none;
-    margin:0 10px;
-    color:#333;
-    font-weight:bold;
 }
 
 /* HEADER */
@@ -44,8 +40,7 @@ header{
     text-align:center;
     padding:140px 20px;
 }
-header h1{font-size:55px;}
-header p{font-size:20px;}
+
 .btn{
     background:var(--gold);
     padding:15px 40px;
@@ -68,11 +63,28 @@ header p{font-size:20px;}
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
+
 .card{
+    display:flex;
+    align-items:center;
+    gap:15px;
     background:white;
-    padding:30px;
+    padding:25px;
     border-radius:15px;
     box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card i{
+    font-size:22px;
+    color:var(--gold);
+    background:#f1f1f1;
+    padding:15px;
+    border-radius:50%;
 }
 
 /* WHY */
@@ -97,8 +109,7 @@ header p{font-size:20px;}
 /* TESTIMONIAL */
 .testimonial{
     text-align:center;
-    max-width:600px;
-    margin:20px auto;
+    margin:20px;
 }
 
 /* FORM */
@@ -117,14 +128,23 @@ input,textarea{
     text-align:center;
     padding:80px 20px;
 }
+
 .phone{
-    font-size:28px;
+    font-size:26px;
     display:block;
     margin:10px;
     color:white;
 }
 
-/* FLOAT BUTTONS */
+/* MAP */
+iframe{
+    width:100%;
+    height:400px;
+    border:0;
+    border-radius:15px;
+}
+
+/* WHATSAPP */
 .whatsapp{
     position:fixed;
     bottom:20px;
@@ -133,8 +153,8 @@ input,textarea{
     color:white;
     padding:15px;
     border-radius:50%;
-    text-decoration:none;
     font-size:22px;
+    text-decoration:none;
 }
 
 /* FOOTER */
@@ -145,45 +165,47 @@ footer{
     padding:40px;
 }
 </style>
-
 </head>
 
 <body>
 
 <!-- NAV -->
 <nav>
-    <div><b>Glänzi</b></div>
-    <div>
-        <a href="#">Home</a>
-        <a href="#services">Leistungen</a>
-        <a href="#kontakt">Kontakt</a>
-    </div>
+<b>Glänzi</b>
+<div>
+<a href="#">Home</a>
+<a href="#services">Leistungen</a>
+<a href="#kontakt">Kontakt</a>
+</div>
 </nav>
 
 <!-- HEADER -->
 <header>
-    <h1>Glänzi Reinigungsservice</h1>
-    <p>Glänzi im Haus, Sorgen raus</p>
-    <a href="tel:+491634895527" class="btn">Jetzt Angebot holen</a>
+<h1>Glänzi Reinigungsservice</h1>
+<p>Glänzi im Haus, Sorgen raus</p>
+<a href="tel:+491634895527" class="btn">Jetzt Angebot holen</a>
 </header>
 
 <!-- SERVICES -->
 <section class="section" id="services">
 <h2>Unsere Leistungen</h2>
+
 <div class="services">
-<div class="card">Glasreinigung</div>
-<div class="card">Büroreinigung</div>
-<div class="card">Treppenhaus</div>
-<div class="card">Bauendreinigung</div>
-<div class="card">Hausmeisterservice</div>
-<div class="card">Außenreinigung</div>
+
+<div class="card"><i class="fas fa-window-maximize"></i> Glasreinigung</div>
+<div class="card"><i class="fas fa-building"></i> Büroreinigung</div>
+<div class="card"><i class="fas fa-stairs"></i> Treppenhausreinigung</div>
+<div class="card"><i class="fas fa-broom"></i> Bauendreinigung</div>
+<div class="card"><i class="fas fa-tools"></i> Hausmeisterservice</div>
+<div class="card"><i class="fas fa-water"></i> Außenreinigung</div>
+
 </div>
 </section>
 
 <!-- WHY -->
 <section class="section why">
 <h2>Warum wir?</h2>
-<p>✔ Schnell<br>✔ Zuverlässig<br>✔ Günstig<br>✔ Professionell</p>
+<p>✔ Zuverlässig<br>✔ Flexibel<br>✔ Faire Preise<br>✔ Top Qualität</p>
 </section>
 
 <!-- GALLERY -->
@@ -199,11 +221,11 @@ footer{
 <!-- TESTIMONIAL -->
 <section class="section">
 <h2>Kundenbewertungen</h2>
-<div class="testimonial">⭐⭐⭐⭐⭐ Sehr gute Arbeit!</div>
-<div class="testimonial">⭐⭐⭐⭐⭐ Immer pünktlich!</div>
+<div class="testimonial">⭐⭐⭐⭐⭐ Sehr sauber gearbeitet!</div>
+<div class="testimonial">⭐⭐⭐⭐⭐ Super Service!</div>
 </section>
 
-<!-- CONTACT FORM -->
+<!-- CONTACT -->
 <section class="section" id="kontakt">
 <h2>Kontakt</h2>
 
@@ -213,6 +235,14 @@ footer{
 <textarea placeholder="Nachricht" required></textarea>
 <button class="btn">Senden</button>
 </form>
+
+</section>
+
+<!-- MAP -->
+<section class="section">
+<h2>Standort</h2>
+
+<iframe src="https://www.google.com/maps?q=Ibbenbüren&output=embed"></iframe>
 
 </section>
 
