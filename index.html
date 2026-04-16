@@ -5,59 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amiri Gebäudereinigung | Ibbenbüren</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
-        header { background: #0056b3; color: white; padding: 1rem 0; text-align: center; }
-        .container { width: 80%; margin: auto; overflow: hidden; padding: 20px; }
-        .services { display: flex; justify-content: space-around; padding: 20px 0; }
-        .service-box { background: #f4f4f4; padding: 20px; border-radius: 8px; width: 30%; text-align: center; }
-        .contact-section { background: #e2e2e2; padding: 30px; border-radius: 8px; margin-top: 20px; }
-        footer { background: #333; color: white; text-align: center; padding: 10px; margin-top: 20px; }
-        .cta-button { background: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+        :root { --primary: #0056b3; --dark: #333; --light: #f8f9fa; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark); margin: 0; background: #fff; }
+        header { background: var(--primary); color: white; padding: 40px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
+        .container { width: 90%; max-width: 1100px; margin: auto; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 40px 0; }
+        .card { background: var(--light); padding: 25px; border-radius: 12px; border-left: 5px solid var(--primary); shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card h3 { color: var(--primary); margin-top: 0; }
+        .contact-box { background: #eef4ff; padding: 30px; border-radius: 15px; text-align: center; margin: 40px 0; }
+        .btn { background: var(--primary); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; }
+        footer { background: var(--dark); color: white; padding: 40px 20px; margin-top: 50px; font-size: 0.9rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        hr { border: 0; border-top: 1px solid #555; margin: 20px 0; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Amiri Gebäudereinigung</h1>
-    <p>Ihr zuverlässiger Partner für Sauberkeit في Ibbenbüren والمنطقة</p>
+    <p>Glänzi im Haus, sorgen raus – Ihr Partner in Ibbenbüren</p>
 </header>
 
 <div class="container">
-    <h2>خدماتنا (Unsere Leistungen)</h2>
-    <div class="services">
-        <div class="service-box">
-            <h3>Unterhaltsreinigung</h3>
-            <p>تنظيف دوري للمكاتب والمنازل لضمان بيئة نظيفة دائماً.</p>
+    <section>
+        <h2 style="text-align:center;">Unsere Leistungen</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Unterhaltsreinigung</h3>
+                <p>Regelmäßige Reinigung von Büros, Praxen und Privathaushalten für dauerhafte Sauberkeit und Hygiene.</p>
+            </div>
+            <div class="card">
+                <h3>Fensterreinigung</h3>
+                <p>Professionelle Reinigung von Glasflächen und Rahmen für einen klaren Durchblick – privat und gewerblich.</p>
+            </div>
+            <div class="card">
+                <h3>Treppenhausreinigung</h3>
+                <p>Gründliche Reinigung von Aufgängen und Fluren in Mehrfamilienhäusern und Wohnanlagen.</p>
+            </div>
         </div>
-        <div class="service-box">
-            <h3>Fensterreinigung</h3>
-            <p>تنظيف احترافي للنوافذ والواجهات الزجاجية.</p>
-        </div>
-        <div class="service-box">
-            <h3>Treppenhausreinigung</h3>
-            <p>تنظيف السلالم والمداخل للمباني السكنية والتجارية.</p>
-        </div>
-    </div>
+    </section>
 
-    <div class="contact-section">
-        <h2>اطلب عرض سعر الآن (Angebot anfordern)</h2>
-        <p>Email: <strong>info@wafa-cleaning.de</strong> (مثال)</p>
-        <p>Mobil: <strong>اكتب رقم هاتفك هنا</strong></p>
-        <a href="mailto:info@yourdomain.com" class="cta-button">أرسل إيميل مباشر</a>
+    <div class="contact-box">
+        <h2>Angebot anfordern</h2>
+        <p>Kontaktieren Sie uns für ein unverbindliches Erstgespräch oder ein kostenloses Angebot.</p>
+        <p><strong>E-Mail:</strong> glanzi.service@gmail.com</p>
+        <p><strong>Mobil:</strong> [ضع رقم هاتفك هنا]</p>
+        <br>
+        <a href="mailto:glanzi.service@gmail.com" class="btn">E-Mail schreiben</a>
     </div>
-
-    <hr>
-    <h3>Impressum (المعلومات القانونية)</h3>
-    <p>
-        Amiri Mohammed Wafa<br>
-        Große Str. 9, 49477 Ibbenbüren<br>
-        E-Mail: اكتب إيميلك هنا<br>
-        Steuernummer: (سوف تضيفه عندما يصلك من Finanzamt)
-    </p>
 </div>
 
 <footer>
-    <p>&copy; 2026 Amiri Gebäudereinigung - Alle Rechte vorbehalten</p>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>Impressum</h4>
+                <p>
+                    Glänzi Gebäudereinigung<br>
+                    Inhaber: Mohammed Wafa Amiri<br>
+                    Große Str. 9<br>
+                    49477 Ibbenbüren
+                </p>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <p>Telefon: [01634895527]<br>
+                E-Mail: glanzi.service@gmail.com</p>
+            </div>
+            <div>
+                <h4>Rechtliches</h4>
+                <p>Steuernummer: Steuernummer folgt<br>
+                Zuständige Kammer: HWK Münster</p>
+            </div>
+        </div>
+        <hr>
+        <p style="text-align:center;">&copy; 2026 Glänzi Service - Alle Rechte vorbehalten.</p>
+    </div>
 </footer>
 
 </body>
