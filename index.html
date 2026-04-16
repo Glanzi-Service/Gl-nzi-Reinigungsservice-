@@ -5,119 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glänzi Reinigungsservice | Ibbenbüren</title>
     <style>
-        :root { --primary: #003366; --secondary: #00aaff; --accent: #28a745; --light-bg: #f4f9ff; --text-dark: #2c3e50; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-dark); margin: 0; background: #fff; }
+        :root { --primary: #0056b3; --secondary: #00aaff; --accent: #28a745; --dark: #1a1a1a; --gray: #f4f7f6; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: var(--dark); margin: 0; background: #fff; text-align: center; }
         
-        /* هيدر احترافي */
+        /* هيدر المبنى الاحترافي */
         header { 
-            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6954?auto=format&fit=crop&w=1500&q=80') no-repeat center center;
-            background-size: cover; color: white; padding: 80px 20px; text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            background-size: cover;
+            color: white; padding: 100px 20px; text-align: center; 
         }
-        header h1 { font-size: 4rem; margin: 0; font-weight: 800; letter-spacing: -1px; }
-        header p { font-size: 1.3rem; opacity: 0.9; margin-top: 10px; font-style: italic; }
-
-        /* شريط الثقة والتأمين */
-        .trust-bar { background: var(--primary); color: white; padding: 15px 0; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; border-bottom: 4px solid var(--secondary); }
-        .trust-tag { font-size: 0.9rem; display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 20px; }
-        .trust-tag b { color: var(--secondary); }
-
-        .container { width: 92%; max-width: 1100px; margin: auto; padding: 50px 0; }
         
-        /* تصحيح قسم الصور والخدمات الرئيسية */
-        .featured-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px; }
-        .feature-card { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #eee; }
-        .feature-card img { width: 100%; height: 220px; object-fit: cover; border-bottom: 5px solid var(--secondary); }
-        .feature-content { padding: 25px; text-align: center; }
-        .feature-content h3 { color: var(--primary); margin: 0 0 10px 0; font-size: 1.5rem; }
-        .feature-content p { font-size: 0.95rem; color: #666; margin: 0; }
-
-        /* شبكة الـ 11 خدمة مع الأيقونات الجمالية */
-        .services-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 40px; }
-        .service-item { 
-            background: var(--light-bg); padding: 20px; border-radius: 12px; 
-            display: flex; align-items: center; gap: 15px; border: 1px solid #e0eaf5;
-            transition: 0.3s;
+        header h1 { 
+            margin: 0; 
+            font-size: 4rem; 
+            font-weight: bold;
+            letter-spacing: 2px;
+            background: linear-gradient(to bottom, #ffffff, #a1d6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.7);
         }
-        .service-item:hover { background: #fff; border-color: var(--secondary); transform: scale(1.02); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .icon-box { font-size: 1.8rem; min-width: 40px; text-align: center; }
-        .service-item span { font-weight: 600; color: var(--primary); font-size: 1rem; }
+        header p { font-size: 1.6rem; margin-top: 10px; text-shadow: 1px 1px 5px rgba(0,0,0,0.5); }
+        
+        .container { width: 90%; max-width: 1100px; margin: auto; padding: 20px; }
+        h2 { color: var(--primary); margin-top: 40px; }
+        
+        /* البطاقات الاحترافية الجديدة بالصور المضمونة */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0; text-align: left; }
+        .card { background: var(--light); padding: 0; border-radius: 10px; overflow: hidden; transition: 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
+        .card-img { width: 100%; height: 200px; object-fit: cover; }
+        .card-content { padding: 20px; }
+        .card h3 { margin-top: 0; color: var(--primary); font-size: 1.3rem; }
+        
+        /* قسم جميع الخدمات الـ 11 المطور */
+        .all-services { background: var(--gray); padding: 60px 0; border-radius: 20px; margin: 40px 0; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; text-align: left; }
+        .service-item { background: white; padding: 20px; border-radius: 8px; border-left: 4px solid var(--secondary); font-weight: bold; transition: 0.3s; }
+        .service-item:hover { background: var(--primary); color: white; }
 
-        /* منطقة التواصل المحدثة */
-        .contact-section { background: #f9f9f9; padding: 60px 20px; text-align: center; border-radius: 30px; margin: 50px 0; border: 2px dashed #ddd; }
-        .phone-btn { font-size: 2.5rem; color: var(--primary); font-weight: 800; text-decoration: none; display: block; margin: 20px 0; }
-        .cta-button { background: var(--accent); color: white; padding: 20px 50px; font-size: 1.3rem; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; transition: 0.3s; box-shadow: 0 8px 20px rgba(40,167,69,0.3); }
-        .cta-button:hover { background: #218838; transform: translateY(-3px); }
-
-        footer { background: #1a1a1a; color: #ccc; padding: 40px 20px; text-align: center; font-size: 0.9rem; }
+        .contact-box { background: #eef4ff; padding: 40px; border-radius: 15px; margin: 50px 0; border: 2px dashed var(--primary); }
+        .btn { background: var(--secondary); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; font-size: 1.2rem; margin-top: 20px; }
+        .phone { font-size: 1.5rem; color: var(--primary); font-weight: bold; display: block; margin: 15px 0; }
+        
+        footer { background: var(--dark); color: white; padding: 40px 20px; margin-top: 50px; font-size: 0.9rem; text-align: center; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; }
+        hr { border: 0; border-top: 1px solid #555; margin: 20px 0; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Glänzi</h1>
-    <p>„Glänzi im Haus, Sorgen raus“ – Ihr Profi für Gebäudereinigung</p>
+    <p>Reinigungsservice – Ihr zuverlässiger Partner in Ibbenbüren</p>
 </header>
 
-<div class="trust-bar">
-    <div class="trust-tag">🛡️ <b>Haftpflichtversichert</b></div>
-    <div class="trust-tag">🏗️ Mitglied der <b>BG BAU</b></div>
-    <div class="trust-tag">🏛️ <b>Meisterbetrieb-Service</b></div>
-    <div class="trust-tag">📍 Ibbenbüren & Umgebung</div>
+<div class="container">
+    <h2>Unsere Premium-Dienstleistungen</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=500&q=60" alt="Professional Office" class="card-img">
+            <div class="card-content">
+                <h3>Büroreinigung</h3>
+                <p>Wir sorgen für eine saubere Arbeitsatmosphäre, die Ihre Produktivität steigert.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502005011925-54e4c238b16c?auto=format&fit=crop&w=500&q=60" alt="Shiny Glass Facade" class="card-img">
+            <div class="card-content">
+                <h3>Fensterreinigung</h3>
+                <p>Kristallklare Sicht durch professionelle Glas- und Rahmenreinigung.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba934f246?auto=format&fit=crop&w=500&q=60" alt="Clean Marble Stairs" class="card-img">
+            <div class="card-content">
+                <h3>Treppenhausreinigung</h3>
+                <p>Zuverlässige Pflege Ihrer Wohnanlagen für einen glänzenden ersten Eindruck.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="container">
-    <div class="featured-services">
-        <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80" alt="Büroreinigung">
-            <div class="feature-content">
-                <h3>Büroreinigung</h3>
-                <p>Professionelle Sauberkeit für eine produktive Arbeitsatmosphäre.</p>
-            </div>
-        </div>
-        <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=600&q=80" alt="Fensterreinigung">
-            <div class="feature-content">
-                <h3>Fensterreinigung</h3>
-                <p>Kristallklare Sicht durch fachgerechte Glas- und Rahmenreinigung.</p>
-            </div>
-        </div>
-        <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1558389186-438424b00a32?auto=format&fit=crop&w=600&q=80" alt="Treppenhausreinigung">
-            <div class="feature-content">
-                <h3>Treppenhausreinigung</h3>
-                <p>Ein gepflegter Eingangsbereich ist die Visitenkarte Ihrer Immobilie.</p>
-            </div>
-        </div>
+<div class="all-services container">
+    <h2>Alle Dienstleistungen im Überblick</h2>
+    <div class="services-grid">
+        <div class="service-item">✨ Glasreinigung</div>
+        <div class="service-item">✨ Büroreinigung</div>
+        <div class="service-item">✨ Praxisreinigung</div>
+        <div class="service-item">✨ Kita-Reinigung</div>
+        <div class="service-item">✨ Wohnungsreinigung</div>
+        <div class="service-item">✨ Treppenhauspflege</div>
+        <div class="service-item">✨ Bauendreinigung</div>
+        <div class="service-item">✨ Spezialaufträge</div>
+        <div class="service-item">✨ Individuelle Reinigung</div>
+        <div class="service-item">✨ Hochdruckreinigung</div>
+        <div class="service-item">✨ Hausmeister-Service</div>
+        <div class="service-item">✨ Müll-Service</div>
+        <div class="service-item">✨ Flexible Zeiten</div>
     </div>
+</div>
 
-    <h2 style="text-align:center; color:var(--primary); font-size: 2rem;">Unsere 11 Kernleistungen</h2>
-    
-    <div class="services-list">
-        <div class="service-item"><div class="icon-box">🪟</div><span>Glasreinigung</span></div>
-        <div class="service-item"><div class="icon-box">🩺</div><span>Büro, Praxis- & Kita</span></div>
-        <div class="service-item"><div class="icon-box">🏘️</div><span>Treppenhauspflege</span></div>
-        <div class="service-item"><div class="icon-box">🏗️</div><span>Bauendreinigung</span></div>
-        <div class="service-item"><div class="icon-box">🪄</div><span>Spezialaufträge</span></div>
-        <div class="service-item"><div class="icon-box">⚙️</div><span>Individuelle Lösungen</span></div>
-        <div class="service-item"><div class="icon-box">🔫</div><span>Hochdruckreinigung</span></div>
-        <div class="service-item"><div class="icon-box">👨‍🔧</div><span>Hausmeister-Service</span></div>
-        <div class="service-item"><div class="icon-box">♻️</div><span>Müll-Service</span></div>
-        <div class="service-item"><div class="icon-box">🕒</div><span>Flexible Zeiten</span></div>
-        <div class="service-item"><div class="icon-box">🅿️</div><span>Parkplatzreinigung</span></div>
-    </div>
-
-    <div class="contact-section">
-        <h2>Bereit für makellose Sauberkeit?</h2>
-        <p>Holen Sie sich jetzt Ihr kostenloses und unverbindliches Angebot.</p>
-        <a href="tel:+491634895527" class="phone-btn">📞 +49 163 4895527</a>
-        <a href="tel:+491634895527" class="cta-button">Jetzt Termin vereinbaren</a>
-    </div>
+<div class="container contact-box">
+    <h2>Angebot anfordern</h2>
+    <p>Haben Sie Fragen أو benötigen Sie eine professionelle Reinigung? Rufen Sie uns an!</p>
+    <span class="phone">📞 +49 163 4895527</span>
+    <a href="tel:+491634895527" class="btn">Direkt anrufen</a>
 </div>
 
 <footer>
-    <p><b>Glänzi Reinigungsservice</b> | Inhaber: Mohammed Wafa Amiri<br>
-    Große Str. 9 | 49477 Ibbenbüren | glanzi.service@gmail.com<br><br>
-    &copy; 2026 Alle Rechte vorbehalten. | Versichert bei R+V</p>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>Impressum</h4>
+                <p>
+                    Glänzi Reinigungsservice<br>
+                    Inhaber: Mohammed Wafa Amiri<br>
+                    Große Str. 9<br>
+                    49477 Ibbenbüren
+                </p>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <p>Mobil: +49 163 4895527<br>
+                E-Mail: glanzi.service@gmail.com</p>
+            </div>
+            <div>
+                <h4>Region</h4>
+                <p>Ibbenbüren, Osnabrück, Rheine und Umgebung.</p>
+            </div>
+        </div>
+        <hr>
+        <p style="text-align:center;">&copy; 2026 Glänzi Reinigungsservice. Alle Rechte vorbehalten.</p>
+    </div>
 </footer>
 
 </body>
