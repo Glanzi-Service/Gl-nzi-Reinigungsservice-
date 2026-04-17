@@ -4,19 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Glänzi Reinigungsservice | Gebäudereinigung Deutschland</title>
+<title>Glänzi Reinigungsservice | Professionelle Gebäudereinigung</title>
 
-<meta name="description" content="Glänzi Reinigungsservice - Professionelle Reinigung für Büros, Fenster, Treppenhäuser und Außenflächen. Schnell, zuverlässig & günstig.">
-<meta name="keywords" content="Glänzi, Reinigungsservice, Gebäudereinigung, Büroreinigung, Fensterreinigung, Treppenhausreinigung Deutschland">
-<meta name="author" content="Glänzi Reinigungsservice">
+<meta name="description" content="Glänzi Reinigungsservice - Professionelle Gebäudereinigung in Deutschland. Büro, Fenster, Treppenhaus, Außenflächen. Schnell & zuverlässig.">
+<meta name="keywords" content="Reinigungsservice, Gebäudereinigung, Büroreinigung, Fensterreinigung Deutschland">
 
 <link rel="canonical" href="https://deine-domain.de">
-
-<!-- Google Vorschau -->
-<meta property="og:title" content="Glänzi Reinigungsservice">
-<meta property="og:description" content="Professionelle Reinigung in Deutschland">
-<meta property="og:image" content="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-<meta property="og:type" content="website">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -43,35 +36,22 @@ nav{
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-nav a{
-    margin-left:15px;
-    text-decoration:none;
-    color:black;
-    font-weight:500;
-}
-
 /* HEADER */
 header{
     background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
     url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=100') center/cover;
     color:white;
     text-align:center;
-    padding:120px 20px;
-}
-
-header h1{
-    font-size:40px;
+    padding:130px 20px;
 }
 
 .btn{
     background:var(--gold);
-    padding:15px 40px;
+    padding:15px 35px;
     border-radius:50px;
     text-decoration:none;
     color:black;
     font-weight:bold;
-    display:inline-block;
-    margin-top:15px;
 }
 
 /* SECTION */
@@ -81,52 +61,79 @@ header h1{
     margin:auto;
 }
 
-/* TEXT SEO */
-.seo-text{
+/* TRUST BAR */
+.trust-bar{
+    background:white;
+    padding:15px;
     text-align:center;
-    margin-bottom:40px;
-    color:#555;
+    font-size:14px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 /* SERVICES */
 .services{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:20px;
 }
 
 .card{
-    display:flex;
-    align-items:center;
-    gap:15px;
     background:white;
-    padding:25px;
+    padding:20px;
     border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    display:flex;
+    gap:15px;
+    align-items:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
 
-/* IMAGE BOX */
-.service-box{
-    position:relative;
-    margin-bottom:25px;
-    border-radius:20px;
-    overflow:hidden;
+.card:hover{
+    transform:translateY(-5px);
 }
 
-.service-box img{
+.card i{
+    background:var(--gold);
+    color:white;
+    padding:12px;
+    border-radius:50%;
+    min-width:45px;
+    text-align:center;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.gallery img{
     width:100%;
     height:250px;
     object-fit:cover;
+    border-radius:15px;
 }
 
-.overlay{
-    position:absolute;
-    bottom:0;
+/* BEFORE AFTER */
+.before-after{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.before-after img{
     width:100%;
+    border-radius:15px;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+    background:white;
     padding:20px;
-    background:linear-gradient(transparent,rgba(0,0,0,0.9));
-    color:white;
-    font-weight:bold;
+    border-radius:15px;
+    margin-bottom:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* FORM */
@@ -138,20 +145,12 @@ input,textarea{
     border:1px solid #ccc;
 }
 
-/* MAP */
-iframe{
-    width:100%;
-    height:350px;
-    border:0;
-    border-radius:15px;
-}
-
 /* CTA */
 .cta{
     background:var(--primary);
     color:white;
     text-align:center;
-    padding:50px;
+    padding:60px;
 }
 
 /* WHATSAPP */
@@ -165,38 +164,18 @@ iframe{
     border-radius:50%;
     font-size:28px;
     text-decoration:none;
-    box-shadow:0 5px 25px rgba(0,0,0,0.4);
     animation:pulse 1.2s infinite;
 }
 
 @keyframes pulse{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.15);}
-    100%{transform:scale(1);}
+    50%{transform:scale(1.1);}
 }
 </style>
-
-<!-- Google Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CleaningService",
-  "name": "Glänzi Reinigungsservice",
-  "telephone": "+491634895527",
-  "email": "glanzi.service@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "DE"
-  },
-  "description": "Professioneller Reinigungsservice für Büro, Fenster und Gebäude."
-}
-</script>
 
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
 <b>Glänzi</b>
 <div>
@@ -205,53 +184,61 @@ iframe{
 </div>
 </nav>
 
-<!-- HEADER -->
 <header>
 <h1>Glänzi Reinigungsservice</h1>
-<p>Glänzi im Haus, Sorgen raus</p>
-<a href="tel:+491634895527" class="btn">Jetzt Angebot holen</a>
+<p>Professionelle Reinigung mit Qualität & Vertrauen</p>
+<a href="https://wa.me/491634895527?text=Hallo%20ich%20möchte%20ein%20Angebot" class="btn">Angebot anfragen</a>
 </header>
 
-<!-- SEO TEXT -->
-<section class="section">
-<p class="seo-text">
-Glänzi Reinigungsservice ist Ihr zuverlässiger Partner für professionelle Gebäudereinigung in Deutschland.
-Wir bieten Büroreinigung, Fensterreinigung, Treppenhausreinigung und Außenreinigung zu fairen Preisen.
-</p>
-</section>
+<div class="trust-bar">
+✔ Mitglied BG Bau & Handwerkskammer Münster | ✔ Haftpflichtversichert | ✔ Zuverlässig & Professionell
+</div>
 
-<!-- SERVICES -->
 <section class="section" id="services">
-<h2>Unsere Leistungen</h2>
+<h2>Unsere Dienstleistungen</h2>
 
 <div class="services">
 <div class="card"><i class="fas fa-window-maximize"></i> Glasreinigung</div>
-<div class="card"><i class="fas fa-building"></i> Büroreinigung</div>
-<div class="card"><i class="fas fa-stairs"></i> Treppenhausreinigung</div>
-<div class="card"><i class="fas fa-broom"></i> Bauendreinigung</div>
+<div class="card"><i class="fas fa-stethoscope"></i> Büro-, Praxis- und Kita-Reinigung</div>
+<div class="card"><i class="fas fa-building"></i> Wohnungs- & Treppenhauspflege</div>
+<div class="card"><i class="fas fa-hard-hat"></i> Bauendreinigung</div>
+<div class="card"><i class="fas fa-magic"></i> Spezialaufträge</div>
+<div class="card"><i class="fas fa-cogs"></i> Individuelle Reinigungslösungen</div>
+<div class="card"><i class="fas fa-water"></i> Hochdruckreinigung</div>
 <div class="card"><i class="fas fa-tools"></i> Hausmeisterservice</div>
-<div class="card"><i class="fas fa-water"></i> Außenreinigung</div>
+<div class="card"><i class="fas fa-trash"></i> Müll-Service</div>
+<div class="card"><i class="fas fa-clock"></i> Flexible Reinigung außerhalb der Öffnungszeiten</div>
+<div class="card"><i class="fas fa-parking"></i> Außenflächen & Parkplätze</div>
 </div>
 </section>
 
-<!-- IMAGES -->
 <section class="section">
-<div class="service-box">
-<img src="https://images.unsplash.com/photo-1497366216548-37526070297c">
-<div class="overlay">Büroreinigung</div>
-</div>
-
-<div class="service-box">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-<div class="overlay">Fensterreinigung</div>
+<h2>Unsere Arbeit</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
+<img src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f">
+<img src="https://images.unsplash.com/photo-1527515637462-daf1fce9b3b1">
 </div>
 </section>
 
-<!-- CONTACT -->
+<section class="section">
+<h2>Vorher / Nachher</h2>
+<div class="before-after">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
+</div>
+</section>
+
+<section class="section">
+<h2>Kundenbewertungen</h2>
+<div class="testimonial">⭐⭐⭐⭐⭐ Sehr professionell und pünktlich!</div>
+<div class="testimonial">⭐⭐⭐⭐⭐ Top Ergebnis, gerne wieder!</div>
+</section>
+
 <section class="section" id="kontakt">
 <h2>Kontakt</h2>
 
-<form action="mailto:glanzi.service@gmail.com" method="post">
+<form action="mailto:info@glaenzi.de">
 <input type="text" placeholder="Name" required>
 <input type="email" placeholder="E-Mail" required>
 <textarea placeholder="Nachricht"></textarea>
@@ -260,21 +247,13 @@ Wir bieten Büroreinigung, Fensterreinigung, Treppenhausreinigung und Außenrein
 
 </section>
 
-<!-- MAP -->
-<section class="section">
-<h2>Standort</h2>
-<iframe src="https://www.google.com/maps?q=Deutschland&output=embed"></iframe>
-</section>
-
-<!-- CTA -->
 <section class="cta">
-<h2>Kontaktieren Sie uns</h2>
+<h2>Jetzt Termin sichern</h2>
 <p>📞 +49 163 4895527</p>
-<p>📧 glanzi.service@gmail.com</p>
+<p>📧 info@glaenzi.de</p>
 </section>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/491634895527">
+<a class="whatsapp" href="https://wa.me/491634895527?text=Hallo%20Glänzi%20Team,%20ich%20brauche%20ein%20Angebot">
 <i class="fab fa-whatsapp"></i>
 </a>
 
