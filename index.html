@@ -4,10 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Glänzi Reinigungsservice | VIP Reinigung</title>
-<meta name="description" content="Professionelle Reinigung in Ibbenbüren. Fenster, Büro, Treppenhaus & mehr. Jetzt Angebot anfordern!">
+<title>Glänzi Reinigungsservice | Premium Reinigung</title>
+<meta name="description" content="Top Reinigungsservice in Ibbenbüren. Fenster, Büro, Haus & mehr. Jetzt kostenloses Angebot erhalten!">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 body {
@@ -29,25 +30,23 @@ header {
 .hero {
     height:100vh;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
+    flex-direction:column;
     text-align:center;
     background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
-    url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') center/cover;
+    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
 }
 
 .hero h1 {
-    font-size:45px;
-    animation:fadeIn 2s;
+    font-size:50px;
+    animation:fadeUp 1.5s ease;
 }
 
-.hero p {
-    animation:fadeIn 3s;
-}
+.hero p {margin:10px;}
 
-@keyframes fadeIn {
-    from {opacity:0; transform:translateY(20px);}
+@keyframes fadeUp {
+    from {opacity:0; transform:translateY(30px);}
     to {opacity:1; transform:translateY(0);}
 }
 
@@ -70,8 +69,8 @@ header {
 
 .services {
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
 .card {
@@ -81,44 +80,38 @@ header {
     transition:0.4s;
 }
 
+.card i {
+    font-size:30px;
+    margin-bottom:10px;
+    color:#22c55e;
+}
+
 .card:hover {
-    transform:scale(1.05);
+    transform:translateY(-10px);
     background:#1f2937;
 }
 
-.before-after {
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+.slider {
+    position:relative;
+    max-width:600px;
+    margin:auto;
 }
 
-.before-after img {
+.slider img {
     width:100%;
-    max-width:400px;
     border-radius:15px;
 }
 
-form input, form textarea {
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border-radius:8px;
-    border:none;
+.after {
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;
+    overflow:hidden;
 }
 
-form button {
-    background:#22c55e;
-    padding:15px;
-    border:none;
-    border-radius:10px;
-    color:white;
-    font-weight:bold;
-}
-
-iframe {
+input[type=range] {
     width:100%;
-    height:350px;
-    border-radius:15px;
 }
 
 .social a {
@@ -126,8 +119,14 @@ iframe {
     padding:12px 20px;
     background:#111827;
     border-radius:10px;
-    color:white;
     text-decoration:none;
+    color:white;
+}
+
+footer {
+    background:#000;
+    padding:40px;
+    text-align:center;
 }
 
 .whatsapp-float {
@@ -137,7 +136,7 @@ iframe {
     background:#25D366;
     padding:15px;
     border-radius:50%;
-    font-size:20px;
+    font-size:22px;
 }
 </style>
 </head>
@@ -148,71 +147,76 @@ iframe {
 
 <section class="hero">
 <h1>Glänzi im Haus, Sorgen raus!</h1>
-<p>Professionelle Reinigung in Ibbenbüren & Umgebung</p>
+<p>Premium Reinigung in Ibbenbüren</p>
 
 <a class="btn whatsapp" href="https://wa.me/491634885527">WhatsApp</a>
-<a class="btn call" href="tel:01634885527">Jetzt anrufen</a>
+<a class="btn call" href="tel:01634885527">Anrufen</a>
 </section>
 
 <section class="section">
 <h2>Unsere Dienstleistungen</h2>
+
 <div class="services">
-<div class="card">Fensterreinigung</div>
-<div class="card">Büroreinigung</div>
-<div class="card">Treppenhausreinigung</div>
-<div class="card">Grundreinigung</div>
-<div class="card">Unterhaltsreinigung</div>
-<div class="card">Glasreinigung</div>
-<div class="card">Baureinigung</div>
-<div class="card">Fassadenreinigung</div>
-<div class="card">Privathaushalte</div>
-<div class="card">Außenflächen</div>
-<div class="card">Hofreinigung</div>
+
+<div class="card"><i class="fas fa-window-maximize"></i>Fensterreinigung</div>
+<div class="card"><i class="fas fa-building"></i>Büroreinigung</div>
+<div class="card"><i class="fas fa-stairs"></i>Treppenhausreinigung</div>
+<div class="card"><i class="fas fa-broom"></i>Grundreinigung</div>
+<div class="card"><i class="fas fa-sync"></i>Unterhaltsreinigung</div>
+<div class="card"><i class="fas fa-glass-water"></i>Glasreinigung</div>
+<div class="card"><i class="fas fa-hammer"></i>Baureinigung</div>
+<div class="card"><i class="fas fa-house"></i>Fassadenreinigung</div>
+<div class="card"><i class="fas fa-couch"></i>Privathaushalte</div>
+<div class="card"><i class="fas fa-tree"></i>Außenflächen</div>
+<div class="card"><i class="fas fa-road"></i>Hofreinigung</div>
+
 </div>
 </section>
 
 <section class="section">
 <h2>Vorher / Nachher</h2>
-<div class="before-after">
-<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
+
+<div class="slider">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+<div class="after">
 <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
 </div>
+</div>
+
 </section>
 
 <section class="section">
-<h2>Angebot anfordern</h2>
+<h2>Kostenloses Angebot</h2>
 
-<form>
-<input type="text" placeholder="Name" required>
-<input type="tel" placeholder="Telefon">
-<textarea placeholder="Ihre Anfrage"></textarea>
-<button type="submit">Senden</button>
-</form>
+<a class="btn whatsapp" href="https://wa.me/491634885527?text=Hallo%20ich%20möchte%20ein%20Angebot">Jetzt Angebot anfordern</a>
 
 </section>
 
 <section class="section">
 <h2>Standort</h2>
-<iframe src="https://www.google.com/maps?q=Große%20Straße%209%2049477%20Ibbenbüren&output=embed"></iframe>
+<iframe src="https://www.google.com/maps?q=Große%20Straße%209%2049477%20Ibbenbüren&output=embed" width="100%" height="350"></iframe>
 </section>
 
 <section class="section">
 <h2>Folge uns</h2>
+
 <div class="social">
-<a href="https://www.instagram.com/glanzi.reinigungservice.de?utm_source=qr&igsh=MXN1eTlsNzJ5bTQ1ag==">Instagram</a>
-<a href="https://www.tiktok.com/@glnzi.reinigugsse">TikTok</a>
+<a href="https://www.instagram.com/glanzi.reinigungservice.de?utm_source=qr&igsh=MXN1eTlsNzJ5bTQ1ag=="><i class="fab fa-instagram"></i> Instagram</a>
+<a href="https://www.tiktok.com/@glnzi.reinigugsse"><i class="fab fa-tiktok"></i> TikTok</a>
 </div>
+
 </section>
 
 <footer>
-<p>Glänzi Reinigungsservice | Mohammed Wafa Amiri</p>
+<p>Glänzi Reinigungsservice</p>
+<p>Mohammed Wafa Amiri</p>
 <p>Große Straße 9, 49477 Ibbenbüren</p>
 <p>info@glänzi.de | 01634885527</p>
 <p>Steuernummer: 327/5004/6442</p>
 <p>Kleingewerbe – keine MwSt gemäß §19 UStG</p>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/491634885527">💬</a>
+<a class="whatsapp-float" href="https://wa.me/491634885527"><i class="fab fa-whatsapp"></i></a>
 
 </body>
 </html>
