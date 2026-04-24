@@ -10,8 +10,21 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body{margin:0;font-family:'Poppins';background:#020617;color:white;}
-header{position:fixed;width:100%;background:#000;padding:15px;text-align:center;}
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#020617;
+color:white;
+}
+
+header{
+position:fixed;
+width:100%;
+background:#020617;
+padding:15px;
+text-align:center;
+border-bottom:1px solid #0ea5e9;
+}
 
 .hero{
 height:100vh;
@@ -20,25 +33,30 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+background:linear-gradient(rgba(0,0,0,0.7),rgba(2,6,23,0.9)),
 url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') center/cover;
 }
 
-.hero h1{font-size:50px;}
+.hero h1{
+font-size:48px;
+color:#0ea5e9;
+}
 
 .btn{
 padding:15px 25px;
+margin:10px;
 border-radius:10px;
 text-decoration:none;
-color:white;
-margin:10px;
 font-weight:bold;
 }
 
-.whatsapp{background:#25D366;}
-.call{background:#0ea5e9;}
+.whatsapp{background:#22c55e;color:white;}
+.call{background:#0ea5e9;color:white;}
 
-.section{padding:80px 20px;text-align:center;}
+.section{
+padding:80px 20px;
+text-align:center;
+}
 
 .grid{
 display:grid;
@@ -47,40 +65,52 @@ gap:25px;
 }
 
 .card{
-background:#111827;
+background:#0f172a;
 padding:25px;
 border-radius:15px;
+border:1px solid #0ea5e9;
+transition:0.3s;
 }
 
-.card i{font-size:30px;color:#22c55e;margin-bottom:10px;}
+.card:hover{
+transform:translateY(-10px);
+}
 
-.review{
-background:#1f2937;
-padding:20px;
+.card i{
+font-size:30px;
+color:#22c55e;
+margin-bottom:10px;
+}
+
+iframe{
+width:100%;
+height:350px;
 border-radius:15px;
-text-align:left;
+border:none;
 }
-
-.stars{color:#facc15;}
-
-iframe{width:100%;height:350px;border-radius:15px;}
 
 .social a{
 margin:10px;
-padding:10px 20px;
-background:#111827;
+padding:12px 20px;
+background:#0f172a;
 border-radius:10px;
-color:white;
 text-decoration:none;
+color:white;
+border:1px solid #0ea5e9;
 }
 
-footer{background:#000;padding:40px;text-align:center;}
+footer{
+background:#020617;
+padding:40px;
+text-align:center;
+border-top:1px solid #0ea5e9;
+}
 
 .whatsapp-float{
 position:fixed;
 bottom:20px;
 right:20px;
-background:#25D366;
+background:#22c55e;
 padding:15px;
 border-radius:50%;
 }
@@ -91,7 +121,6 @@ border-radius:50%;
 
 <header>Glänzi Reinigungsservice</header>
 
-<!-- HERO -->
 <section class="hero">
 <h1>Glänzi im Haus, Sorgen raus!</h1>
 <p>Professionelle Reinigung in Ibbenbüren</p>
@@ -119,54 +148,29 @@ border-radius:50%;
 </div>
 </section>
 
-<!-- REVIEWS -->
+<!-- GOOGLE REVIEWS REAL -->
 <section class="section">
-<h2>⭐ Kundenbewertungen</h2>
+<h2>⭐ Google Bewertungen</h2>
 
-<div class="grid">
+<!-- استبدل الرابط برابط Google Maps الخاص بك -->
+<iframe src="https://www.google.com/maps?q=Glänzi%20Reinigungsservice%20Ibbenbüren&output=embed"></iframe>
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>Sehr gute Arbeit! Fenster perfekt sauber.</p>
-<b>- Kunde</b>
-</div>
+<br><br>
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>Schnell, freundlich und zuverlässig.</p>
-<b>- Kunde</b>
-</div>
-
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>Top Service, gerne wieder!</p>
-<b>- Kunde</b>
-</div>
-
-</div>
-
-<br>
-
-<a class="btn whatsapp" href="https://www.google.com/maps">
-👉 Alle Google Bewertungen ansehen
+<a class="btn call" href="https://www.google.com/maps">
+Alle Bewertungen ansehen
 </a>
 
 </section>
 
 <!-- CTA -->
 <section class="section">
-<h2>Jetzt Angebot sichern</h2>
+<h2>Jetzt kostenloses Angebot</h2>
 
 <a class="btn whatsapp" href="https://wa.me/491634895527?text=Hallo%20ich%20möchte%20ein%20Angebot">
-Kostenloses Angebot
+Angebot anfordern
 </a>
 
-</section>
-
-<!-- MAP -->
-<section class="section">
-<h2>Standort</h2>
-<iframe src="https://www.google.com/maps?q=Große%20Straße%209%2049477%20Ibbenbüren&output=embed"></iframe>
 </section>
 
 <!-- SOCIAL -->
@@ -174,8 +178,13 @@ Kostenloses Angebot
 <h2>Folge uns</h2>
 
 <div class="social">
-<a href="https://www.instagram.com/glanzi.reinigungservice.de"><i class="fab fa-instagram"></i></a>
-<a href="https://www.tiktok.com/@glnzi.reinigugsse"><i class="fab fa-tiktok"></i></a>
+<a href="https://www.instagram.com/glanzi.reinigungservice.de">
+<i class="fab fa-instagram"></i> Instagram
+</a>
+
+<a href="https://www.tiktok.com/@glnzi.reinigugsse">
+<i class="fab fa-tiktok"></i> TikTok
+</a>
 </div>
 
 </section>
