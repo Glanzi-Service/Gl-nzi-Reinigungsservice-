@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Glänzi Reinigungsservice Premium</title>
+<title>Glänzi Reinigungsservice</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -17,130 +17,161 @@ background:#000;
 color:white;
 }
 
-/* HEADER */
-header{
-position:fixed;
-width:100%;
-background:#000;
-padding:15px;
-text-align:center;
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
 border-bottom:1px solid #d4af37;
-z-index:1000;
+}
+
+nav h1{
+color:#d4af37;
+}
+
+nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+}
+
+.call-btn{
+border:1px solid #d4af37;
+padding:10px 15px;
+border-radius:10px;
 }
 
 /* HERO */
 .hero{
-height:100vh;
+height:90vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.9)),
-url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') center/cover;
+position:relative;
+overflow:hidden;
+}
+
+/* LOGO BACKGROUND */
+.hero::before{
+content:'';
+position:absolute;
+width:800px;
+height:800px;
+background:url('logo.png') no-repeat center;
+background-size:contain;
+opacity:0.08;
+z-index:0;
 }
 
 .hero h1{
-font-size:50px;
+font-size:45px;
+z-index:1;
+}
+
+.hero span{
 color:#d4af37;
 }
 
 .hero p{
 color:#ccc;
+z-index:1;
 }
 
-/* BUTTONS */
 .btn{
 padding:15px 25px;
 margin:10px;
 border-radius:10px;
 text-decoration:none;
 font-weight:bold;
+z-index:1;
 }
 
-.gold{
-background:#d4af37;
-color:black;
-}
+.gold{background:#d4af37;color:black;}
+.whatsapp{background:#25D366;color:white;}
 
-.whatsapp{
-background:#25D366;
-color:white;
-}
-
-/* SECTIONS */
+/* SECTION */
 .section{
-padding:80px 20px;
+padding:60px 20px;
 text-align:center;
+}
+
+.section h2{
+color:#d4af37;
 }
 
 /* SERVICES */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:30px;
 }
 
 .card{
-background:#111;
+border:1px solid #d4af37;
 padding:25px;
 border-radius:15px;
-border:1px solid #d4af37;
+background:#0b0b0b;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-5px);
 }
 
 .card i{
-font-size:30px;
+font-size:35px;
 color:#d4af37;
 margin-bottom:10px;
 }
 
-/* WHY US */
-.highlight{
-color:#d4af37;
-font-weight:bold;
+/* BOX */
+.box{
+border:1px solid #d4af37;
+padding:25px;
+border-radius:15px;
+margin-top:30px;
 }
 
 /* REVIEWS */
-.review{
-background:#111;
-padding:20px;
-border-radius:15px;
-border:1px solid #d4af37;
-}
-
 .stars{
 color:#d4af37;
+font-size:25px;
 }
 
 /* MAP */
 iframe{
 width:100%;
-height:350px;
-border-radius:15px;
+height:300px;
 border:none;
+border-radius:10px;
 }
 
 /* SOCIAL */
-.social a{
-margin:10px;
-padding:12px 20px;
+.social{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:20px;
+}
+
+.social div{
 border:1px solid #d4af37;
+padding:20px;
 border-radius:10px;
-text-decoration:none;
-color:white;
+width:200px;
 }
 
 /* FOOTER */
 footer{
-background:#000;
-padding:40px;
-text-align:center;
+padding:30px;
 border-top:1px solid #d4af37;
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
 }
 
 /* FLOAT */
@@ -157,12 +188,22 @@ border-radius:50%;
 
 <body>
 
-<header>Glänzi Reinigungsservice</header>
+<!-- NAV -->
+<nav>
+<h1>GLÄNZI</h1>
+<div>
+<a href="#">Home</a>
+<a href="#">Leistungen</a>
+<a href="#">Bewertungen</a>
+<a href="#">Kontakt</a>
+</div>
+<div class="call-btn">📞 01634895527</div>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
-<h1>Premium Reinigung</h1>
-<p>Glänzi im Haus, Sorgen raus!</p>
+<h1>Glänzi im Haus,<br><span>Sorgen raus!</span></h1>
+<p>Professionelle Reinigung in Ibbenbüren</p>
 
 <a class="btn gold" href="tel:01634895527">Jetzt anrufen</a>
 <a class="btn whatsapp" href="https://wa.me/491634895527">WhatsApp</a>
@@ -170,106 +211,87 @@ border-radius:50%;
 
 <!-- SERVICES -->
 <section class="section">
-<h2 class="highlight">Unsere Leistungen</h2>
+<h2>Unsere Leistungen</h2>
 
 <div class="grid">
 <div class="card"><i class="fas fa-window-maximize"></i>Fensterreinigung</div>
 <div class="card"><i class="fas fa-building"></i>Büroreinigung</div>
-<div class="card"><i class="fas fa-stairs"></i>Treppenhausreinigung</div>
+<div class="card"><i class="fas fa-stairs"></i>Treppenhaus</div>
 <div class="card"><i class="fas fa-broom"></i>Grundreinigung</div>
-<div class="card"><i class="fas fa-sync"></i>Unterhaltsreinigung</div>
-<div class="card"><i class="fas fa-glass-water"></i>Glasreinigung</div>
-<div class="card"><i class="fas fa-hammer"></i>Baureinigung</div>
-<div class="card"><i class="fas fa-house"></i>Fassadenreinigung</div>
-<div class="card"><i class="fas fa-couch"></i>Privathaushalte</div>
-<div class="card"><i class="fas fa-tree"></i>Außenflächen</div>
-<div class="card"><i class="fas fa-road"></i>Hofreinigung</div>
+<div class="card"><i class="fas fa-calendar"></i>Unterhalt</div>
+<div class="card"><i class="fas fa-spray-can"></i>Glasreinigung</div>
+<div class="card"><i class="fas fa-hard-hat"></i>Baureinigung</div>
+<div class="card"><i class="fas fa-city"></i>Fassade</div>
+<div class="card"><i class="fas fa-house"></i>Privat</div>
+<div class="card"><i class="fas fa-tree"></i>Außen</div>
+<div class="card"><i class="fas fa-road"></i>Hof</div>
 </div>
+
 </section>
 
-<!-- WHY US -->
+<!-- WHY + REVIEWS -->
 <section class="section">
-<h2 class="highlight">Warum Glänzi?</h2>
-
-<p>✔ <span class="highlight">Zuverlässig</span> & pünktlich</p>
-<p>✔ <span class="highlight">Premium Qualität</span></p>
-<p>✔ <span class="highlight">Faire Preise</span></p>
-<p>✔ <span class="highlight">Flexible Termine</span></p>
-</section>
-
-<!-- REVIEWS -->
-<section class="section">
-<h2 class="highlight">Kundenbewertungen</h2>
 
 <div class="grid">
-<div class="review">
+
+<div class="box">
+<h3>Warum Glänzi?</h3>
+<p>✔ Zuverlässig</p>
+<p>✔ Premium Qualität</p>
+<p>✔ Faire Preise</p>
+<p>✔ Flexible Termine</p>
+</div>
+
+<div class="box">
+<h3>Kundenbewertungen</h3>
 <div class="stars">★★★★★</div>
-<p>Top Service, sehr sauber!</p>
+<p>5.0 Google Bewertung</p>
+<a class="btn gold" href="https://www.google.com/maps">Alle ansehen</a>
 </div>
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>Schnell und professionell.</p>
 </div>
-
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>Sehr zufrieden, gerne wieder.</p>
-</div>
-</div>
-
-<br>
-
-<a class="btn gold" href="https://www.google.com/maps">
-Alle Bewertungen ansehen
-</a>
 
 </section>
 
 <!-- CTA -->
 <section class="section">
-<h2 class="highlight">Jetzt Angebot sichern</h2>
-
-<a class="btn gold" href="https://wa.me/491634895527?text=Hallo%20ich%20möchte%20ein%20Angebot">
-Kostenloses Angebot
-</a>
-
+<div class="box">
+<h2>Jetzt kostenloses Angebot sichern!</h2>
+<p>Schnell. Einfach. Unverbindlich.</p>
+<a class="btn whatsapp" href="https://wa.me/491634895527">Angebot anfordern</a>
+</div>
 </section>
 
 <!-- MAP -->
 <section class="section">
-<h2 class="highlight">Standort</h2>
+<h2>Standort</h2>
 <iframe src="https://www.google.com/maps?q=Große%20Straße%209%2049477%20Ibbenbüren&output=embed"></iframe>
 </section>
 
 <!-- SOCIAL -->
 <section class="section">
-<h2 class="highlight">Folge uns</h2>
+<h2>Folge uns</h2>
 
 <div class="social">
-<a href="https://www.instagram.com/glanzi.reinigungservice.de"><i class="fab fa-instagram"></i></a>
-<a href="https://www.tiktok.com/@glnzi.reinigugsse"><i class="fab fa-tiktok"></i></a>
+<div>📸 Instagram</div>
+<div>🎵 TikTok</div>
 </div>
+
 </section>
 
-<!-- LEGAL -->
-<section class="section">
-<h2>Impressum</h2>
+<!-- FOOTER -->
+<footer>
+<div>
+<h3>Impressum</h3>
 <p>Glänzi Reinigungsservice</p>
 <p>Mohammed Wafa Amiri</p>
-<p>Große Straße 9, 49477 Ibbenbüren</p>
-<p>01634895527</p>
-<p>info@glänzi.de</p>
-<p>Steuernummer: 327/5004/6442</p>
-</section>
+<p>Ibbenbüren</p>
+</div>
 
-<section class="section">
-<h2>Datenschutz</h2>
-<p>Ihre Daten werden gemäß DSGVO geschützt.</p>
-</section>
-
-<footer>
-<p>© Glänzi Reinigungsservice</p>
+<div>
+<h3>Datenschutz</h3>
+<p>DSGVO geschützt</p>
+</div>
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/491634895527">
