@@ -1,280 +1,1636 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Glänzi Reinigungsservice Premium</title>
+  <title>Glänzi | Reinigungsservice in Ibbenbüren</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta
+    name="description"
+    content="Glänzi Reinigungsservice in Ibbenbüren: Fensterreinigung, Büroreinigung, Treppenhausreinigung und mehr. Kostenloses Angebot anfragen."
+  >
 
-<style>
-body{
-margin:0;
-font-family:'Poppins',sans-serif;
-background:#000;
-color:white;
-}
+  <meta name="theme-color" content="#0757be">
 
-/* HEADER */
-header{
-position:fixed;
-width:100%;
-background:#000;
-padding:15px;
-text-align:center;
-border-bottom:1px solid #d4af37;
-z-index:1000;
-}
+  <style>
+    /* FARBEN UND GRUNDEINSTELLUNGEN */
+    :root {
+      --blue: #0757be;
+      --blue-dark: #123263;
+      --cyan: #17b9ed;
+      --yellow: #ffd127;
+      --text: #20334c;
+      --muted: #607087;
+      --light: #f2f8ff;
+      --border: #dce7f3;
+      --white: #ffffff;
+      --radius: 22px;
+      --shadow: 0 16px 45px rgba(18, 50, 99, 0.08);
+    }
 
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.9)),
-url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') center/cover;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.hero h1{
-font-size:50px;
-color:#d4af37;
-}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
 
-.hero p{
-color:#ccc;
-}
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.65;
+    }
 
-/* BUTTONS */
-.btn{
-padding:15px 25px;
-margin:10px;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
-}
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
 
-.gold{
-background:#d4af37;
-color:black;
-}
+    a {
+      color: inherit;
+    }
 
-.whatsapp{
-background:#25D366;
-color:white;
-}
+    button, input, select, textarea {
+      font: inherit;
+    }
 
-/* SECTIONS */
-.section{
-padding:80px 20px;
-text-align:center;
-}
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-/* SERVICES */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 4px;
+    }
 
-.card{
-background:#111;
-padding:25px;
-border-radius:15px;
-border:1px solid #d4af37;
-transition:0.3s;
-}
+    .container {
+      width: min(1140px, calc(100% - 40px));
+      margin-inline: auto;
+    }
 
-.card:hover{
-transform:translateY(-10px);
-}
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 15px;
+      z-index: 100;
+      background: var(--yellow);
+      padding: 12px;
+    }
 
-.card i{
-font-size:30px;
-color:#d4af37;
-margin-bottom:10px;
-}
+    .skip-link:focus {
+      top: 15px;
+    }
 
-/* WHY US */
-.highlight{
-color:#d4af37;
-font-weight:bold;
-}
+    /* KOPFBEREICH */
+    .topbar {
+      background: var(--blue-dark);
+      color: white;
+      font-size: 0.8rem;
+    }
 
-/* REVIEWS */
-.review{
-background:#111;
-padding:20px;
-border-radius:15px;
-border:1px solid #d4af37;
-}
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding-block: 9px;
+    }
 
-.stars{
-color:#d4af37;
-}
+    .topbar a {
+      text-decoration: none;
+    }
 
-/* MAP */
-iframe{
-width:100%;
-height:350px;
-border-radius:15px;
-border:none;
-}
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255, 255, 255, 0.98);
+      border-bottom: 1px solid var(--border);
+    }
 
-/* SOCIAL */
-.social a{
-margin:10px;
-padding:12px 20px;
-border:1px solid #d4af37;
-border-radius:10px;
-text-decoration:none;
-color:white;
-}
+    .header-inner {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-/* FOOTER */
-footer{
-background:#000;
-padding:40px;
-text-align:center;
-border-top:1px solid #d4af37;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
 
-/* FLOAT */
-.whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:15px;
-border-radius:50%;
-}
-</style>
+    .brand img {
+      width: 62px;
+      height: 62px;
+      object-fit: contain;
+    }
+
+    .brand strong {
+      display: block;
+      color: var(--blue);
+      font-size: 1.65rem;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .brand small {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    .menu-button {
+      display: none;
+      background: var(--light);
+      color: var(--blue-dark);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 9px 14px;
+      cursor: pointer;
+    }
+
+    /* BUTTONS */
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      min-height: 50px;
+      padding: 13px 22px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      font-size: 0.93rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-blue {
+      background: var(--blue);
+      color: white;
+    }
+
+    .button-blue:hover {
+      background: #03479f;
+      color: white;
+    }
+
+    .button-yellow {
+      background: var(--yellow);
+      color: var(--blue-dark);
+    }
+
+    .button-yellow:hover {
+      background: #ffe16c;
+    }
+
+    .button-outline {
+      background: white;
+      border-color: var(--border);
+      color: var(--blue-dark);
+    }
+
+    /* STARTSEITE */
+    .hero {
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at 85% 25%,
+          rgba(23, 185, 237, 0.13),
+          transparent 40%
+        ),
+        linear-gradient(135deg, #ffffff, #edf6ff);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 65px;
+      align-items: center;
+      padding-block: 75px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: white;
+      border: 1px solid var(--border);
+      padding: 8px 13px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 650;
+      color: var(--blue);
+      margin-bottom: 24px;
+    }
+
+    .hero-badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cyan);
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 5.5vw, 4.5rem);
+      line-height: 1.08;
+      letter-spacing: -0.05em;
+      color: var(--blue-dark);
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: var(--blue);
+    }
+
+    .hero-description {
+      max-width: 520px;
+      font-size: 1.08rem;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .hero-note {
+      margin: 18px 0 0;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .logo-showcase {
+      position: relative;
+      background: white;
+      padding: 35px 35px 25px;
+      border: 1px solid var(--border);
+      border-radius: 35px;
+      box-shadow: var(--shadow);
+      transform: rotate(2deg);
+    }
+
+    .logo-showcase img {
+      width: 100%;
+      aspect-ratio: 1.09;
+      object-fit: contain;
+    }
+
+    .logo-caption {
+      margin-top: 18px;
+      padding-top: 20px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .logo-caption strong {
+      display: block;
+      color: var(--blue-dark);
+      font-size: 1.08rem;
+    }
+
+    .logo-caption span {
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding-block: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .benefits span::before {
+      content: "✓";
+      color: var(--blue);
+      margin-right: 10px;
+    }
+
+    /* ABSCHNITTE */
+    .section {
+      padding-block: 85px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 3.7vw, 2.9rem);
+      line-height: 1.17;
+      letter-spacing: -0.04em;
+      color: var(--blue-dark);
+      margin-bottom: 18px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 45px;
+      margin-bottom: 35px;
+    }
+
+    .section-heading > p {
+      max-width: 420px;
+      color: var(--muted);
+    }
+
+    /* LEISTUNGEN */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      background: white;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .service-icon {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: var(--light);
+      color: var(--blue);
+      margin-bottom: 23px;
+    }
+
+    .service-icon svg {
+      width: 25px;
+      height: 25px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .service-card h3 {
+      color: var(--blue-dark);
+      font-size: 1.1rem;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 0;
+    }
+
+    .service-note {
+      margin-top: 25px;
+      padding: 20px;
+      border-radius: 14px;
+      background: var(--light);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* WARUM GLÄNZI */
+    .about {
+      background: var(--light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 75px;
+      align-items: start;
+    }
+
+    .about-description {
+      color: var(--muted);
+    }
+
+    .slogan {
+      border-left: 4px solid var(--yellow);
+      padding-left: 20px;
+      margin: 28px 0 0;
+      color: var(--blue);
+      font-size: 1.4rem;
+      font-weight: 650;
+    }
+
+    .points {
+      display: grid;
+      gap: 23px;
+    }
+
+    .point {
+      display: flex;
+      gap: 16px;
+    }
+
+    .point-number {
+      display: grid;
+      place-items: center;
+      flex: 0 0 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: var(--blue);
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .point h3 {
+      color: var(--blue-dark);
+      font-size: 1.05rem;
+      margin-bottom: 5px;
+    }
+
+    .point p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 0;
+    }
+
+    /* ABLAUF */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 35px;
+    }
+
+    .step {
+      padding: 28px;
+      border-radius: var(--radius);
+      background: var(--light);
+    }
+
+    .step-number {
+      color: var(--blue);
+      font-size: 2.7rem;
+      font-weight: 750;
+      line-height: 1;
+      margin-bottom: 23px;
+    }
+
+    .step h3 {
+      color: var(--blue-dark);
+      font-size: 1.1rem;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 0.93rem;
+      margin-bottom: 0;
+    }
+
+    /* KONTAKT */
+    .contact {
+      background: var(--blue-dark);
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+    }
+
+    .contact h2 {
+      color: white;
+    }
+
+    .contact .eyebrow {
+      color: var(--yellow);
+    }
+
+    .contact-description {
+      color: #c8d7eb;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 23px;
+      margin-top: 30px;
+    }
+
+    .contact-details small {
+      display: block;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #c8d7eb;
+    }
+
+    .contact-details a {
+      font-size: 1.2rem;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .request-card {
+      background: white;
+      color: var(--text);
+      padding: 30px;
+      border-radius: var(--radius);
+    }
+
+    .request-card h3 {
+      font-size: 1.3rem;
+      color: var(--blue-dark);
+      margin-bottom: 8px;
+    }
+
+    .request-card > p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    form {
+      display: grid;
+      gap: 17px;
+      margin-top: 23px;
+    }
+
+    label {
+      font-size: 0.84rem;
+      font-weight: 650;
+    }
+
+    input, select, textarea {
+      display: block;
+      width: 100%;
+      margin-top: 7px;
+      padding: 12px;
+      border: 1px solid #bccbdd;
+      border-radius: 9px;
+      min-height: 48px;
+      color: var(--text);
+      background: white;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+
+    .form-note a {
+      color: var(--blue);
+    }
+
+    /* FAQ UND STANDORT */
+    .faq {
+      max-width: 800px;
+    }
+
+    details {
+      padding: 21px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 650;
+      color: var(--blue-dark);
+    }
+
+    details p {
+      color: var(--muted);
+      margin: 15px 0 0;
+      font-size: 0.93rem;
+    }
+
+    .location {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      padding: 28px;
+      margin-top: 40px;
+      border-radius: var(--radius);
+      background: var(--light);
+    }
+
+    .location h3 {
+      color: var(--blue-dark);
+      margin-bottom: 5px;
+    }
+
+    .location p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    /* RECHTLICHES UND FUSSZEILE */
+    .legal {
+      padding-block: 30px;
+      background: #f8fafc;
+    }
+
+    .legal h3 {
+      font-size: 1rem;
+      margin: 22px 0 7px;
+    }
+
+    .draft-warning {
+      border-left: 3px solid #c99a00;
+      padding: 12px;
+      background: #fff6d5;
+      color: #705613;
+    }
+
+    footer {
+      background: var(--blue-dark);
+      color: #d6e1ef;
+      padding-block: 30px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      font-size: 0.82rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+    }
+
+    .mobile-contact {
+      display: none;
+    }
+
+    /* TABLETS UND HANDYS */
+    @media (max-width: 1000px) {
+      nav {
+        gap: 15px;
+      }
+
+      .hero-grid {
+        gap: 35px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .contact-grid {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      body {
+        padding-bottom: calc(76px + env(safe-area-inset-bottom));
+      }
+
+      .container {
+        width: calc(100% - 36px);
+      }
+
+      .topbar-inner span:last-child {
+        display: none;
+      }
+
+      .header-inner {
+        min-height: 76px;
+      }
+
+      .brand img {
+        width: 52px;
+        height: 52px;
+      }
+
+      .brand strong {
+        font-size: 1.45rem;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      nav.open {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        padding-block: 45px;
+        gap: 40px;
+      }
+
+      h1 {
+        font-size: clamp(2.7rem, 10vw, 4rem);
+      }
+
+      .logo-showcase {
+        max-width: 380px;
+        width: 100%;
+        margin-inline: auto;
+        padding: 25px;
+        transform: none;
+      }
+
+      .benefits {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .section {
+        padding-block: 60px;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .section-heading > p {
+        max-width: none;
+      }
+
+      .about-grid,
+      .contact-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .request-card {
+        padding: 24px;
+      }
+
+      .location,
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .mobile-contact {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 40;
+        gap: 10px;
+        background: white;
+        border-top: 1px solid var(--border);
+        padding: 10px 15px
+          calc(10px + env(safe-area-inset-bottom));
+      }
+
+      .mobile-contact .button {
+        flex: 1;
+        min-height: 46px;
+        padding: 10px;
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
-<header>Glänzi Reinigungsservice</header>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Ihr Reinigungsservice in Ibbenbüren</span>
+      <span>
+        Persönlich erreichbar:
+        <a href="tel:+491634895527">0163 4895527</a>
+      </span>
+    </div>
+  </div>
 
-<!-- HERO -->
-<section class="hero">
-<h1>Premium Reinigung</h1>
-<p>Glänzi im Haus, Sorgen raus!</p>
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="#start" aria-label="Glänzi Startseite">
+        <img
+          src="logo.png"
+          alt=""
+          width="62"
+          height="62"
+        >
+        <span>
+          <strong>Glänzi</strong>
+          <small>REINIGUNGSSERVICE</small>
+        </span>
+      </a>
 
-<a class="btn gold" href="tel:01634895527">Jetzt anrufen</a>
-<a class="btn whatsapp" href="https://wa.me/491634895527">WhatsApp</a>
-</section>
+      <button
+        class="menu-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navigation"
+      >
+        Menü
+      </button>
 
-<!-- SERVICES -->
-<section class="section">
-<h2 class="highlight">Unsere Leistungen</h2>
+      <nav id="navigation" aria-label="Hauptnavigation">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#warum">Warum Glänzi?</a>
+        <a href="#ablauf">Ablauf</a>
+        <a class="button button-blue" href="#kontakt">
+          Angebot anfragen ↗
+        </a>
+      </nav>
+    </div>
+  </header>
 
-<div class="grid">
-<div class="card"><i class="fas fa-window-maximize"></i>Fensterreinigung</div>
-<div class="card"><i class="fas fa-building"></i>Büroreinigung</div>
-<div class="card"><i class="fas fa-stairs"></i>Treppenhausreinigung</div>
-<div class="card"><i class="fas fa-broom"></i>Grundreinigung</div>
-<div class="card"><i class="fas fa-sync"></i>Unterhaltsreinigung</div>
-<div class="card"><i class="fas fa-glass-water"></i>Glasreinigung</div>
-<div class="card"><i class="fas fa-hammer"></i>Baureinigung</div>
-<div class="card"><i class="fas fa-house"></i>Fassadenreinigung</div>
-<div class="card"><i class="fas fa-couch"></i>Privathaushalte</div>
-<div class="card"><i class="fas fa-tree"></i>Außenflächen</div>
-<div class="card"><i class="fas fa-road"></i>Hofreinigung</div>
-</div>
-</section>
+  <main id="inhalt">
+    <!-- STARTBEREICH -->
+    <section class="hero" id="start">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-badge">
+              Für Zuhause, Büro & Immobilie
+            </div>
 
-<!-- WHY US -->
-<section class="section">
-<h2 class="highlight">Warum Glänzi?</h2>
+            <h1>
+              Sauberkeit, die<br>
+              <span>Freude macht.</span>
+            </h1>
 
-<p>✔ <span class="highlight">Zuverlässig</span> & pünktlich</p>
-<p>✔ <span class="highlight">Premium Qualität</span></p>
-<p>✔ <span class="highlight">Faire Preise</span></p>
-<p>✔ <span class="highlight">Flexible Termine</span></p>
-</section>
+            <p class="hero-description">
+              Ihr Reinigungsservice in Ibbenbüren.
+              Wir unterstützen Sie bei der Reinigung Ihrer Räume –
+              persönlich abgestimmt auf Ihren Bedarf.
+            </p>
 
-<!-- REVIEWS -->
-<section class="section">
-<h2 class="highlight">Kundenbewertungen</h2>
+            <div class="hero-actions">
+              <a class="button button-yellow" href="#kontakt">
+                Kostenloses Angebot anfragen ↗
+              </a>
+              <a
+                class="button button-outline"
+                href="tel:+491634895527"
+              >
+                Jetzt anrufen
+              </a>
+            </div>
 
-<div class="grid">
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>Top Service, sehr sauber!</p>
-</div>
+            <p class="hero-note">
+              Einmalige Reinigung oder regelmäßige Unterstützung.
+            </p>
+          </div>
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>Schnell und professionell.</p>
-</div>
+          <div class="logo-showcase">
+            <img
+              src="logo.png"
+              alt="Glänzi-Logo: blaues G mit Reinigungshandschuh und gelben Glanzsternen"
+              width="1310"
+              height="1201"
+              fetchpriority="high"
+            >
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>Sehr zufrieden, gerne wieder.</p>
-</div>
-</div>
+            <div class="logo-caption">
+              <strong>Glänzi im Haus, Sorgen raus!</strong>
+              <span>Für Räume, in denen Sie sich wohlfühlen.</span>
+            </div>
+          </div>
+        </div>
 
-<br>
+        <div class="benefits">
+          <span>Persönliche Beratung</span>
+          <span>Individuelle Angebote</span>
+          <span>Termine nach Absprache</span>
+        </div>
+      </div>
+    </section>
 
-<a class="btn gold" href="https://www.google.com/maps">
-Alle Bewertungen ansehen
-</a>
+    <!-- LEISTUNGEN -->
+    <section class="section" id="leistungen">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Unsere Leistungen</p>
+            <h2>Passende Reinigung.<br>Für Ihren Alltag.</h2>
+          </div>
 
-</section>
+          <p>
+            Von einzelnen Glasflächen bis zur regelmäßigen Reinigung:
+            Gemeinsam besprechen wir, was Ihr Objekt braucht.
+          </p>
+        </div>
 
-<!-- CTA -->
-<section class="section">
-<h2 class="highlight">Jetzt Angebot sichern</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="4" y="3" width="16" height="18" rx="1"/>
+                <path d="M12 3v18M4 12h16"/>
+              </svg>
+            </div>
+            <h3>Fenster- & Glasreinigung</h3>
+            <p>
+              Klare Sicht für Fenster und Glasflächen.
+              Rahmen und Fensterbänke berücksichtigen wir
+              nach vereinbartem Leistungsumfang.
+            </p>
+          </article>
 
-<a class="btn gold" href="https://wa.me/491634895527?text=Hallo%20ich%20möchte%20ein%20Angebot">
-Kostenloses Angebot
-</a>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 21V3h14v18M3 21h18"/>
+                <path d="M9 7h1M14 7h1M9 11h1M14 11h1"/>
+                <path d="M10 21v-5h4v5"/>
+              </svg>
+            </div>
+            <h3>Büro- & Unterhaltsreinigung</h3>
+            <p>
+              Gepflegte Arbeitsräume und regelmäßige Reinigung.
+              Umfang und Reinigungsintervalle stimmen wir
+              auf Ihren Betrieb ab.
+            </p>
+          </article>
 
-</section>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 21h5v-5h5v-5h5V6h4"/>
+                <path d="M3 4v6M3 4h6"/>
+              </svg>
+            </div>
+            <h3>Treppenhausreinigung</h3>
+            <p>
+              Saubere Treppenhäuser und Eingangsbereiche
+              für Wohn- und Geschäftsgebäude.
+              Einmalig oder in vereinbarten Abständen.
+            </p>
+          </article>
 
-<!-- MAP -->
-<section class="section">
-<h2 class="highlight">Standort</h2>
-<iframe src="https://www.google.com/maps?q=Große%20Straße%209%2049477%20Ibbenbüren&output=embed"></iframe>
-</section>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 11l9-8 9 8M5 10v11h14V10"/>
+                <path d="M10 21v-7h4v7"/>
+              </svg>
+            </div>
+            <h3>Reinigung für Privathaushalte</h3>
+            <p>
+              Unterstützung bei der Reinigung Ihres Zuhauses.
+              Sie sagen uns, welche Räume und Aufgaben
+              Sie abgeben möchten.
+            </p>
+          </article>
 
-<!-- SOCIAL -->
-<section class="section">
-<h2 class="highlight">Folge uns</h2>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M15 3l-5 9M7 11l8 4-3 7-9-5z"/>
+                <path d="M6 16l-2 4M10 18l-2 4"/>
+                <path d="M18 3v5M16 5.5h4"/>
+              </svg>
+            </div>
+            <h3>Grund- & Baureinigung</h3>
+            <p>
+              Gründliche Reinigung bei besonderem Bedarf
+              oder nach Bauarbeiten. Aufwand und geeignete
+              Verfahren klären wir vorab.
+            </p>
+          </article>
 
-<div class="social">
-<a href="https://www.instagram.com/glanzi.reinigungservice.de"><i class="fab fa-instagram"></i></a>
-<a href="https://www.tiktok.com/@glnzi.reinigugsse"><i class="fab fa-tiktok"></i></a>
-</div>
-</section>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 21V8l8-5 8 5v13M2 21h20"/>
+                <path d="M8 11h2M14 11h2M8 15h2M14 15h2"/>
+              </svg>
+            </div>
+            <h3>Fassaden & Außenflächen</h3>
+            <p>
+              Reinigung von Fassaden, Höfen und Außenflächen
+              nach Absprache – angepasst an Material,
+              Zugang und Verschmutzung.
+            </p>
+          </article>
+        </div>
 
-<!-- LEGAL -->
-<section class="section">
-<h2>Impressum</h2>
-<p>Glänzi Reinigungsservice</p>
-<p>Mohammed Wafa Amiri</p>
-<p>Große Straße 9, 49477 Ibbenbüren</p>
-<p>01634895527</p>
-<p>info@glänzi.de</p>
-<p>Steuernummer: 327/5004/6442</p>
-</section>
+        <div class="service-note">
+          <strong>Sie haben einen anderen Reinigungsbedarf?</strong>
+          Sprechen Sie uns an. Wir prüfen, wie wir helfen können.
+        </div>
+      </div>
+    </section>
 
-<section class="section">
-<h2>Datenschutz</h2>
-<p>Ihre Daten werden gemäß DSGVO geschützt.</p>
-</section>
+    <!-- WARUM GLÄNZI -->
+    <section class="section about" id="warum">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">Warum Glänzi?</p>
+          <h2>Persönlich besprochen.<br>Klar vereinbart.</h2>
 
-<footer>
-<p>© Glänzi Reinigungsservice</p>
-</footer>
+          <p class="about-description">
+            Jedes Zuhause und jede Immobilie ist anders.
+            Deshalb klären wir mit Ihnen den gewünschten Umfang,
+            passende Termine und die Besonderheiten Ihres Objekts.
+          </p>
 
-<a class="whatsapp-float" href="https://wa.me/491634895527">
-<i class="fab fa-whatsapp"></i>
-</a>
+          <blockquote class="slogan">
+            „Glänzi im Haus, Sorgen raus!“
+          </blockquote>
+        </div>
 
+        <div class="points">
+          <div class="point">
+            <span class="point-number" aria-hidden="true">01</span>
+            <div>
+              <h3>Direkter Kontakt</h3>
+              <p>
+                Besprechen Sie Ihre Wünsche persönlich mit uns –
+                telefonisch, per WhatsApp oder E-Mail.
+              </p>
+            </div>
+          </div>
+
+          <div class="point">
+            <span class="point-number" aria-hidden="true">02</span>
+            <div>
+              <h3>Individuelles Angebot</h3>
+              <p>
+                Ihr Angebot richtet sich nach dem Objekt und
+                den Leistungen, die Sie tatsächlich benötigen.
+              </p>
+            </div>
+          </div>
+
+          <div class="point">
+            <span class="point-number" aria-hidden="true">03</span>
+            <div>
+              <h3>Passende Terminvereinbarung</h3>
+              <p>
+                Einmaliger Einsatz oder regelmäßige Unterstützung:
+                Termine vereinbaren wir gemeinsam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABLAUF -->
+    <section class="section" id="ablauf">
+      <div class="container">
+        <p class="eyebrow">So funktioniert’s</p>
+        <h2>In drei Schritten zur Reinigung.</h2>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-number" aria-hidden="true">01</div>
+            <h3>Anfrage stellen</h3>
+            <p>
+              Teilen Sie uns die gewünschte Leistung,
+              den Standort und die ungefähre Größe mit.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step-number" aria-hidden="true">02</div>
+            <h3>Details & Angebot klären</h3>
+            <p>
+              Wir besprechen Ihren Bedarf und vereinbaren
+              bei Bedarf eine Besichtigung.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step-number" aria-hidden="true">03</div>
+            <h3>Termin vereinbaren</h3>
+            <p>
+              Wenn das Angebot passt, stimmen wir den
+              Reinigungstermin und den Zugang zum Objekt ab.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="section contact" id="kontakt">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Kontakt & Angebot</p>
+          <h2>Was dürfen wir<br>für Sie reinigen?</h2>
+
+          <p class="contact-description">
+            Erzählen Sie uns kurz von Ihrem Vorhaben.
+            Wir besprechen die nächsten Schritte mit Ihnen.
+          </p>
+
+          <div class="contact-details">
+            <div>
+              <small>Telefon</small>
+              <a href="tel:+491634895527">0163 4895527</a>
+            </div>
+
+            <div>
+              <small>E-Mail</small>
+              <a href="mailto:info@glänzi.de">info@glänzi.de</a>
+            </div>
+
+            <div>
+              <small>Adresse</small>
+              Große Straße 9<br>
+              49477 Ibbenbüren
+            </div>
+          </div>
+        </div>
+
+        <div class="request-card">
+          <h3>Kostenloses Angebot anfragen</h3>
+          <p>
+            Bereiten Sie Ihre Anfrage vor und senden Sie
+            diese anschließend selbst über WhatsApp.
+          </p>
+
+          <form id="request-form">
+            <label for="name">
+              Ihr Name (optional)
+              <input
+                id="name"
+                name="name"
+                autocomplete="name"
+                maxlength="100"
+                placeholder="Vor- und Nachname"
+              >
+            </label>
+
+            <label for="service">
+              Gewünschte Leistung
+              <select id="service" name="service">
+                <option>Fenster- & Glasreinigung</option>
+                <option>Büro- & Unterhaltsreinigung</option>
+                <option>Treppenhausreinigung</option>
+                <option>Reinigung für Privathaushalte</option>
+                <option>Grund- & Baureinigung</option>
+                <option>Fassaden & Außenflächen</option>
+                <option>Sonstiges</option>
+              </select>
+            </label>
+
+            <label for="message">
+              Ort und weitere Angaben (optional)
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                maxlength="2000"
+                placeholder="Zum Beispiel: Fensterreinigung in Ibbenbüren, etwa 12 Fenster ..."
+              ></textarea>
+            </label>
+
+            <button class="button button-blue" type="submit">
+              Anfrage in WhatsApp öffnen ↗
+            </button>
+
+            <p class="form-note">
+              Die Eingaben werden nicht durch dieses Formular
+              an unseren Webserver gesendet. Der Button übergibt
+              einen Nachrichtenentwurf an WhatsApp. Sie senden
+              ihn dort selbst. Bitte keine sensiblen Daten eingeben.
+              Alternativ:
+              <a href="mailto:info@glänzi.de">direkt per E-Mail schreiben</a>.
+              Hinweise im
+              <a href="#datenschutz">Datenschutz</a>.
+            </p>
+
+            <noscript>
+              <p class="form-note">
+                Für den Nachrichtenentwurf benötigen Sie JavaScript.
+                Bitte kontaktieren Sie uns alternativ telefonisch
+                oder per E-Mail.
+              </p>
+            </noscript>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="faq">
+          <p class="eyebrow">Häufige Fragen</p>
+          <h2>Gut zu wissen.</h2>
+
+          <details>
+            <summary>Was kostet eine Reinigung?</summary>
+            <p>
+              Das hängt von Fläche, Zustand, Zugänglichkeit
+              und Leistungsumfang ab. Kontaktieren Sie uns
+              für ein individuelles Angebot.
+            </p>
+          </details>
+
+          <details>
+            <summary>Ist eine regelmäßige Reinigung möglich?</summary>
+            <p>
+              Ja. Den gewünschten Umfang und Turnus
+              besprechen wir persönlich mit Ihnen.
+            </p>
+          </details>
+
+          <details>
+            <summary>Wie vereinbare ich einen Termin?</summary>
+            <p>
+              Rufen Sie uns an oder schreiben Sie uns.
+              Nach Klärung des Auftrags vereinbaren wir
+              einen konkreten Termin.
+            </p>
+          </details>
+
+          <details>
+            <summary>Reinigen Sie auch außerhalb von Ibbenbüren?</summary>
+            <p>
+              Nennen Sie uns den Standort Ihres Objekts.
+              Wir prüfen, ob ein Einsatz dort möglich ist.
+            </p>
+          </details>
+        </div>
+
+        <div class="location">
+          <div>
+            <h3>Glänzi in Ibbenbüren</h3>
+            <p>Große Straße 9 · 49477 Ibbenbüren</p>
+          </div>
+
+          <a
+            class="button button-blue"
+            href="https://www.google.com/maps/search/?api=1&query=Gro%C3%9Fe%20Stra%C3%9Fe%209%2C%2049477%20Ibbenb%C3%BCren"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Auf Google Maps ansehen ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      RECHTLICHE ENTWÜRFE:
+      Vor Veröffentlichung prüfen und vervollständigen.
+      Nicht einfach die Warnhinweise entfernen.
+    -->
+    <section class="legal">
+      <div class="container">
+        <details id="impressum">
+          <summary>Impressum – Entwurf</summary>
+
+          <h3>Anbieter</h3>
+          <p>
+            Glänzi Reinigungsservice<br>
+            Inhaber: Mohammed Wafa Amiri<br>
+            Große Straße 9<br>
+            49477 Ibbenbüren<br>
+            Deutschland
+          </p>
+
+          <h3>Kontakt</h3>
+          <p>
+            Telefon:
+            <a href="tel:+491634895527">0163 4895527</a><br>
+            E-Mail:
+            <a href="mailto:info@glänzi.de">info@glänzi.de</a>
+          </p>
+
+          <p class="draft-warning">
+            Vor Veröffentlichung: Anbieterangaben bestätigen
+            und weitere gegebenenfalls erforderliche Angaben ergänzen.
+            Eine Steuernummer ist keine Umsatzsteuer-ID und
+            wird hier nicht veröffentlicht.
+          </p>
+        </details>
+
+        <details id="datenschutz">
+          <summary>Datenschutzhinweise – Entwurf</summary>
+
+          <p class="draft-warning">
+            Dieser Text ist keine abschließend geprüfte
+            Datenschutzerklärung. Er muss anhand Ihres
+            tatsächlichen Hostings und Ihrer betrieblichen
+            Datenverarbeitung vervollständigt werden.
+          </p>
+
+          <h3>Verantwortlicher</h3>
+          <p>
+            Mohammed Wafa Amiri, Glänzi Reinigungsservice,
+            Große Straße 9, 49477 Ibbenbüren.<br>
+            Kontakt: info@glänzi.de, Telefon: 0163 4895527.
+          </p>
+
+          <h3>Hosting und Serverdaten</h3>
+          <p>
+            Die Webseite wird bei IONOS gehostet.
+            Beim Abruf verarbeitet der Hostinganbieter
+            technisch erforderliche Daten, insbesondere
+            IP-Adresse und Angaben zum Seitenabruf.
+            Die technisch erforderliche Bereitstellung
+            und Absicherung erfolgt auf Grundlage von
+            Art. 6 Abs. 1 lit. f DSGVO.
+            Das berechtigte Interesse liegt im sicheren
+            Betrieb der Webseite.
+            Genaue Anbieterbezeichnung, Protokollierung,
+            Speicherdauer und Auftragsverarbeitung sind
+            anhand des Hostingvertrags zu ergänzen.
+          </p>
+
+          <h3>Kontaktaufnahme</h3>
+          <p>
+            Übermittelte Kontaktangaben verwenden wir
+            zur Bearbeitung Ihrer Anfrage.
+            Bei vorvertraglichen Anfragen ist die Grundlage
+            Art. 6 Abs. 1 lit. b DSGVO, bei sonstigen Anfragen
+            gegebenenfalls Art. 6 Abs. 1 lit. f DSGVO.
+            Löschfristen und gesetzliche Aufbewahrungspflichten
+            müssen anhand der tatsächlichen Abläufe ergänzt werden.
+          </p>
+
+          <h3>WhatsApp-Nachrichtenentwurf</h3>
+          <p>
+            Das Anfrageformular setzt Ihre Eingaben lokal
+            im Browser zu einem Entwurf zusammen.
+            Es sendet diese nicht an unseren Webserver.
+            Durch Auswahl des WhatsApp-Buttons werden die
+            Angaben an WhatsApp übergeben.
+            Sie versenden die Nachricht dort selbst.
+            Die betriebliche WhatsApp-Nutzung, die beteiligten
+            Anbieter und mögliche Drittlandübermittlungen
+            müssen gesondert geprüft und beschrieben werden.
+          </p>
+
+          <h3>Externe Dienste</h3>
+          <p>
+            Diese HTML-Datei bindet keine externen Schriftarten,
+            Analyseprogramme oder Karten ein.
+            Sie setzt selbst keine Cookies und nutzt keinen
+            Browser-Lokalspeicher.
+            Beim Aufruf externer Links, beispielsweise zu
+            Google Maps oder sozialen Netzwerken, gelten
+            die Datenschutzhinweise der jeweiligen Anbieter.
+          </p>
+
+          <h3>Ihre Rechte</h3>
+          <p>
+            Unter den gesetzlichen Voraussetzungen haben
+            Sie Rechte auf Auskunft, Berichtigung, Löschung,
+            Einschränkung der Verarbeitung und Datenübertragbarkeit.
+            Bei Verarbeitung aufgrund berechtigter Interessen
+            besteht unter den Voraussetzungen des Art. 21 DSGVO
+            ein Widerspruchsrecht.
+            Erteilte Einwilligungen können für die Zukunft
+            widerrufen werden.
+            Sie können sich außerdem bei einer
+            Datenschutzaufsichtsbehörde beschweren,
+            insbesondere bei der Landesbeauftragten für
+            Datenschutz und Informationsfreiheit
+            Nordrhein-Westfalen.
+          </p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        © <span id="year">2026</span> Glänzi Reinigungsservice<br>
+        Glänzi im Haus, Sorgen raus!
+      </div>
+
+      <div class="footer-links">
+        <a
+          href="https://www.instagram.com/glanzi.reinigungservice.de"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Instagram ↗</a>
+
+        <a
+          href="https://www.tiktok.com/@glnzi.reinigugsse"
+          target="_blank"
+          rel="noopener noreferrer"
+        >TikTok ↗</a>
+
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-contact" aria-label="Schnellkontakt">
+    <a
+      class="button button-outline"
+      href="tel:+491634895527"
+    >
+      Anrufen
+    </a>
+
+    <a class="button button-blue" href="#kontakt">
+      Angebot anfragen ↗
+    </a>
+  </div>
+
+  <script>
+    "use strict";
+
+    // HANDY-MENÜ
+    const menuButton = document.querySelector(".menu-button");
+    const navigation = document.getElementById("navigation");
+
+    function closeMenu() {
+      menuButton.setAttribute("aria-expanded", "false");
+      navigation.classList.remove("open");
+    }
+
+    menuButton.addEventListener("click", function () {
+      const isOpen =
+        menuButton.getAttribute("aria-expanded") === "true";
+
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      navigation.classList.toggle("open", !isOpen);
+    });
+
+    navigation.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (
+        event.key === "Escape" &&
+        navigation.classList.contains("open")
+      ) {
+        closeMenu();
+        menuButton.focus();
+      }
+    });
+
+    // AKTUELLES JAHR
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // ANGEBOTSANFRAGE ALS WHATSAPP-ENTWURF
+    const form = document.getElementById("request-form");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const service = document.getElementById("service").value;
+      const message =
+        document.getElementById("message").value.trim();
+
+      let text =
+        "Hallo Glänzi, ich möchte ein kostenloses Angebot anfragen.\n\n";
+
+      text += "Leistung: " + service;
+
+      if (name) {
+        text += "\nName: " + name;
+      }
+
+      if (message) {
+        text += "\n\nWeitere Angaben:\n" + message;
+      }
+
+      text += "\n\nBitte teilen Sie mir die nächsten Schritte mit.";
+
+      window.location.href =
+        "https://wa.me/491634895527?text=" +
+        encodeURIComponent(text);
+    });
+
+    // RECHTLICHE BEREICHE BEI LINKAUFRUF ÖFFNEN
+    function openLegalSection() {
+      const id = window.location.hash.slice(1);
+
+      if (id === "impressum" || id === "datenschutz") {
+        const section = document.getElementById(id);
+        section.open = true;
+        section.scrollIntoView();
+      }
+    }
+
+    document.querySelectorAll(
+      'a[href="#impressum"], a[href="#datenschutz"]'
+    ).forEach(function (link) {
+      link.addEventListener("click", function () {
+        const id = link.getAttribute("href").slice(1);
+        document.getElementById(id).open = true;
+      });
+    });
+
+    window.addEventListener("hashchange", openLegalSection);
+
+    if (window.location.hash) {
+      openLegalSection();
+    }
+  </script>
 </body>
 </html>
